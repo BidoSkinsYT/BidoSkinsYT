@@ -437,3 +437,6 @@ GamesSection:NewButton("Brookhaven", "has Scripts", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
 print ("Clicked")
 end)
+
+local Tab4 = Window:NewTab("Credits")
+local CreditsSection = Tab4:NewSection("Made By Bido Skins YT")
