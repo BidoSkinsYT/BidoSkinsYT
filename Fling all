@@ -1,0 +1,132 @@
+--FE FLING ALL
+local torso = game.Players.LocalPlayer.Character.Torso
+
+
+
+--true or false for torso in place
+torso.Anchored = "true"
+
+wait(0.4)
+function rmesh(HatName)
+for _,mesh in next, workspace[game.Players.LocalPlayer.Name][HatName]:GetDescendants() do
+if mesh:IsA("Mesh") or mesh:IsA("SpecialMesh") then
+mesh:Remove()
+end
+end
+end
+
+function create(part, parent, position, rotation)
+part.AccessoryWeld:Remove()
+Instance.new("Attachment",part)
+Instance.new("AlignPosition",part)
+Instance.new("AlignOrientation",part)
+Instance.new("Attachment",parent)
+part.AlignPosition.Attachment0 = part.Attachment
+part.AlignOrientation.Attachment0 = part.Attachment
+part.AlignPosition.Attachment1 = parent.Attachment
+part.AlignOrientation.Attachment1 = parent.Attachment
+part.Attachment.Position = position
+part.Attachment.Orientation = rotation
+part.AlignPosition.Responsiveness = 200
+part.AlignOrientation.Responsiveness = 200
+part.AlignPosition.MaxForce = 9999999
+part.AlignPosition.RigidityEnabled = false
+part.AlignOrientation.MaxTorque = 9999999
+end
+
+local LocalPlayer = game.Players.LocalPlayer
+
+function eswait(num)
+if num == 0 or num == nil then
+game:service("RunService").Stepped:wait(0)
+else
+for i = 0, num do
+game:service("RunService").Stepped:wait(0)
+end
+end
+end
+
+function makepart(hat,part)
+Instance.new('Part',workspace[LocalPlayer.Name])
+workspace[LocalPlayer.Name].Part.Name = 'lerp'..hat
+workspace[LocalPlayer.Name]['lerp'..hat].CanCollide = false
+workspace[LocalPlayer.Name]['lerp'..hat].Size = workspace[LocalPlayer.Name][hat].Handle.Size
+workspace[LocalPlayer.Name]['lerp'..hat].Transparency = 1
+Instance.new('Weld',workspace[LocalPlayer.Name]['lerp'..hat])
+create(workspace[LocalPlayer.Name][hat].Handle,workspace[LocalPlayer.Name]['lerp'..hat],Vector3.new(),Vector3.new())
+workspace[LocalPlayer.Name]['lerp'..hat].Weld.Part0 = workspace[LocalPlayer.Name]['lerp'..hat]
+workspace[LocalPlayer.Name]['lerp'..hat].Weld.Part1 = workspace[LocalPlayer.Name][part]
+workspace[LocalPlayer.Name]['lerp'..hat].Weld.C0 = workspace[LocalPlayer.Name]['lerp'..hat].CFrame:inverse() * workspace[LocalPlayer.Name][part].CFrame * CFrame.new(0,0,0) * CFrame.Angles(math.rad(0),math.rad(0),0)
+end
+
+local hatsine = 0
+
+local hatchange = 1
+
+function clerp(hat,ppx,ppy,pppz,rrrx,rrry,rrz,lppx,lppy,lpppz,lrrrx,lrrry,lrrz,speed)
+coroutine.wrap(function()
+while true do
+hatsine = hatsine + speed
+workspace[game.Players.LocalPlayer.Name]['lerp'..hat].Weld.C0 = workspace[game.Players.LocalPlayer.Name]['lerp'..hat].Weld.C0:lerp(CFrame.new(ppx + lppx * math.sin(hatsine/11), ppy + lppy * math.sin(hatsine/11), pppz + lpppz * math.sin(hatsine/11)) * CFrame.Angles(math.rad(rrrx + lrrrx * math.sin(hatsine/11)), math.rad(rrry + lrrry * math.sin(hatsine/11)), math.rad(rrz + lrrz * math.sin(hatsine/11))),0.1)
+eswait()
+end
+end)()
+end
+
+local player = game.Players.LocalPlayer
+local character1 = player.Character
+local mouse = player:GetMouse()
+
+local fakebody = Instance.new("Part", character1)
+fakebody.Transparency = 1
+fakebody.Anchored = true
+fakebody.CanCollide = false
+fakebody.Position = character1.Head.Position
+fakebody.Name = "FPart"
+wait()
+_G.ReanimationType = "PDeath" --PDeath, Fling, Simple
+_G.Velocity = Vector3.new(36,0,0)
+_G.FlingBlock = true
+_G.FlingBlockTransparency = 1
+_G.HighlightFlingBlock = true
+_G.FlingBlockPosition = "FPart"
+_G.HighlightFlingBlockColor = Color3.fromRGB(255,0,0)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GelatekWasTaken/Reanimation.lua/main/Main/Main.lua"))()
+wait(1)
+wait(0.9)
+for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then
+game:GetService("RunService").Heartbeat:connect(function()
+v.Velocity = Vector3.new(0,-30,0)
+------------------------------
+
+local Players = game.Players:GetPlayers()
+local nplrs = #Players
+local Randomplayer = nil
+local torso = game.Players.LocalPlayer.Character.Torso
+--local camera = workspace.CurrentCamera
+--local HumPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+--local leftleg = game.Players.LocalPlayer.Character.["Left Leg"]
+--local rightleg = game.Players.LocalPlayer.Character.["Right Leg"]
+--local leftarm = game.Players.LocalPlayer.Character.["Left Arm"]
+--local rightarm = game.Players.LocalPlayer.Character.["Right Arm"]
+if nplrs > 0 then
+     Randomplayer = Players[math.random(1, nplrs)]
+end
+--print(Randomplayer)
+	v.Position = Randomplayer.Character.Torso.Position
+	--local hum1 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	--local CameraMove = camera.CFrame:Lerp(hum1, 1)
+   torso.Anchored = "true"
+   -- leftleg.Anchored = "true"
+    --rightleg.Anchored = "true"
+   -- leftarm.Anchored = "true"
+    --rightarm.Anchored = "true"
+    
+v.Velocity = Vector3.new(0,-30,0)
+------------------------------------
+wait(0.5)
+end)
+end
+end
