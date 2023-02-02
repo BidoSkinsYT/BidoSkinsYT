@@ -1,0 +1,20 @@
+-- Subscribe to ZhenX on YouTube
+-- Credits to the Owner
+
+-- * Got questions/long messages? Contact on Discord [deuces#1961] - *Copy Insides of brackets*
+-- ! Some Toggles that you can set before using emote (only has to be set once to affect all)
+local globalenv = getgenv and getgenv() or _G or shared
+globalenv.Key_Hide = "Z"
+-- Key to hide the menu (including the skulls)
+globalenv.Pause_Other_Animations = true
+-- Self-explanatory
+globalenv.Stop_Emote_If_Moved = true
+-- It will automatically stop current emote after moving
+globalenv.Loop_Emote = true
+-- It will automatically repeat/loop current emote if it ends
+loadstring(
+   game:HttpGet(
+       "https://gist.githubusercontent.com/htt-py/92db22eeefad0042a6da9117501ad827/raw/UniversalAnimationsPlayer.luau",
+       true
+   )
+)()
