@@ -1,0 +1,3 @@
+-- subscribe to Bido Skins on YouTube
+
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/OmarXploits/Free-Scripts/main/R15-Fighter"),true))()
