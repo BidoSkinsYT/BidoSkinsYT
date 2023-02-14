@@ -1,0 +1,3 @@
+-- Subscribe to Bido Skins on Youtube
+
+loadstring(game:HttpGet('https://pastebin.com/raw/3hDQcTaD'))()
