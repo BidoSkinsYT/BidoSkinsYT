@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/-Scripts/main/Fluxus%20Utility%20v0.0.1",true))()
