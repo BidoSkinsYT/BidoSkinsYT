@@ -1,0 +1,3 @@
+-- discord server : discord.gg/butterhub
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Butterisgood/butter-hub/main/butters%20recode-obfuscated.lua'))("Apple is cute")
