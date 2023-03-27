@@ -1,0 +1,36 @@
+local swimming = false
+local RunService = game:GetService("RunService")
+oldgrav = workspace.Gravity
+workspace.Gravity = 0
+local char = game.Players.LocalPlayer.Character
+local swimDied = function()
+workspace.Gravity = oldgrav
+swimming = false
+end
+local Humanoid = char:FindFirstChildWhichIsA("Humanoid")
+gravReset = Humanoid.Died:Connect(swimDied)
+local enums = Enum.HumanoidStateType:GetEnumItems()
+table.remove(enums, table.find(enums, Enum.HumanoidStateType.None))
+for i, v in pairs(enums) do
+Humanoid:SetStateEnabled(v, false)
+end
+Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
+swimbeat = RunService.Heartbeat:Connect(function()
+pcall(function()
+char.HumanoidRootPart.Velocity = ((Humanoid.MoveDirection ~= Vector3.new() or UserInputService:IsKeyDown(Enum.KeyCode.Space)) and char.HumanoidRootPart.Velocity or Vector3.new())
+end)
+end)
+swimming = true
+local Clip = false
+wait(0.1)
+local function NoclipLoop()
+if Clip == false and char ~= nil then
+for _, child in pairs(char:GetDescendants()) do
+if child:IsA("BasePart") and child.CanCollide == true then
+child.CanCollide = false
+end
+end
+end
+end
+Noclipping = RunService.Stepped:Connect(NoclipLoop)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Leg%20Resize'))()
