@@ -1,0 +1,36 @@
+--made by sadawrf#3405
+_G.Enable = true --Toggle
+_G.Speed = "0" --Increases/Decreases Circle Speed
+_G.range = "2" --Increases/Decreases Circle Range
+
+--Modify If You Want
+local players = game:GetService("Players")
+while _G.Enable do
+    local closestPlayer = nil
+    local shortestDistance = math.huge
+
+    for i, player in ipairs(players:GetPlayers()) do
+        if player ~= players.LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+            local distance =
+                (player.Character.HumanoidRootPart.Position - players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            if distance < shortestDistance then
+                closestPlayer = player
+                shortestDistance = distance
+            end
+        end
+    end
+
+    if closestPlayer then
+        local rootCFrame = players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local targetCFrame = closestPlayer.Character.HumanoidRootPart.CFrame
+        for i = 1, 360 do
+            local angle = math.rad(i)
+            local x = math.sin(angle) * _G.range
+            local z = math.cos(angle) * _G.range
+            local offset = Vector3.new(x, 0, z)
+            local newCFrame = targetCFrame + offset
+            players.LocalPlayer.Character.HumanoidRootPart.CFrame = newCFrame
+            task.wait(_G.Speed)
+        end
+    end
+end
