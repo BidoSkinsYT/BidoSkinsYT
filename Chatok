@@ -1,0 +1,1586 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88 
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
+]=]
+
+-- Instances: 37 | Scripts: 4 | Modules: 12
+local G2L = {};
+
+-- StarterGui.Main
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"]["Name"] = [[Main]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.Main.Frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["Active"] = true;
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["Size"] = UDim2.new(0, 262, 0, 341);
+G2L["2"]["Selectable"] = true;
+G2L["2"]["Position"] = UDim2.new(0.40441176295280457, 0, 0.05410821735858917, 0);
+
+-- StarterGui.Main.Frame.TextBox
+G2L["3"] = Instance.new("TextBox", G2L["2"]);
+G2L["3"]["CursorPosition"] = -1;
+G2L["3"]["BorderSizePixel"] = 2;
+G2L["3"]["TextSize"] = 14;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3"]["Size"] = UDim2.new(0, 239, 0, 144);
+G2L["3"]["Text"] = [[]];
+G2L["3"]["Position"] = UDim2.new(0.03435114398598671, 0, 0.1348973661661148, 0);
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX
+G2L["4"] = Instance.new("LocalScript", G2L["3"]);
+G2L["4"]["Name"] = [[PUTONTEXTBOX]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor
+G2L["5"] = Instance.new("ModuleScript", G2L["4"]);
+G2L["5"]["Name"] = [[ScriptEditor]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Syntax
+G2L["6"] = Instance.new("ModuleScript", G2L["5"]);
+G2L["6"]["Name"] = [[Syntax]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Theme
+G2L["7"] = Instance.new("ModuleScript", G2L["5"]);
+G2L["7"]["Name"] = [[Theme]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.GetLines
+G2L["8"] = Instance.new("ModuleScript", G2L["5"]);
+G2L["8"]["Name"] = [[GetLines]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.FakeEditor
+G2L["9"] = Instance.new("ModuleScript", G2L["5"]);
+G2L["9"]["Name"] = [[FakeEditor]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.TextFixer
+G2L["a"] = Instance.new("ModuleScript", G2L["5"]);
+G2L["a"]["Name"] = [[TextFixer]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.GetLine
+G2L["b"] = Instance.new("ModuleScript", G2L["5"]);
+G2L["b"]["Name"] = [[GetLine]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.TweenLibrary
+G2L["c"] = Instance.new("ModuleScript", G2L["5"]);
+G2L["c"]["Name"] = [[TweenLibrary]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.GetWord
+G2L["d"] = Instance.new("ModuleScript", G2L["5"]);
+G2L["d"]["Name"] = [[GetWord]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Lexer
+G2L["e"] = Instance.new("ModuleScript", G2L["5"]);
+G2L["e"]["Name"] = [[Lexer]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Suggestions
+G2L["f"] = Instance.new("ModuleScript", G2L["5"]);
+G2L["f"]["Name"] = [[Suggestions]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Words
+G2L["10"] = Instance.new("ModuleScript", G2L["5"]);
+G2L["10"]["Name"] = [[Words]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor
+G2L["11"] = Instance.new("Frame", G2L["5"]);
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(35, 41, 35);
+G2L["11"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["11"]["Name"] = [[Editor]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll
+G2L["12"] = Instance.new("ScrollingFrame", G2L["11"]);
+G2L["12"]["Active"] = true;
+G2L["12"]["CanvasSize"] = UDim2.new(0, 0, 0, 0);
+G2L["12"]["ElasticBehavior"] = Enum.ElasticBehavior.Always;
+G2L["12"]["TopImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["AutomaticCanvasSize"] = Enum.AutomaticSize.XY;
+G2L["12"]["BackgroundTransparency"] = 0.9990000128746033;
+G2L["12"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["12"]["ScrollBarImageColor3"] = Color3.fromRGB(64, 64, 64);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(53, 53, 53);
+G2L["12"]["Name"] = [[Scroll]];
+G2L["12"]["BottomImage"] = [[rbxasset://textures/ui/Scroll/scroll-middle.png]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Source
+G2L["13"] = Instance.new("TextBox", G2L["12"]);
+G2L["13"]["TextSize"] = 17;
+G2L["13"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["13"]["TextStrokeColor3"] = Color3.fromRGB(41, 41, 41);
+G2L["13"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["TextColor3"] = Color3.fromRGB(239, 239, 239);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13"]["MultiLine"] = true;
+G2L["13"]["BackgroundTransparency"] = 0.9990000128746033;
+G2L["13"]["Size"] = UDim2.new(1, -44, 1, -5);
+G2L["13"]["Text"] = [[print("hi there!")]];
+G2L["13"]["Position"] = UDim2.new(0, 44, 0, 5);
+G2L["13"]["AutomaticSize"] = Enum.AutomaticSize.XY;
+G2L["13"]["Name"] = [[Source]];
+G2L["13"]["ClearTextOnFocus"] = false;
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Source.LineHighlight
+G2L["14"] = Instance.new("Frame", G2L["13"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["14"]["BackgroundTransparency"] = 0.9399999976158142;
+G2L["14"]["Size"] = UDim2.new(1, 0, 0, 17);
+G2L["14"]["Position"] = UDim2.new(0, -10, 0, 9);
+G2L["14"]["Name"] = [[LineHighlight]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Source.Hidden
+G2L["15"] = Instance.new("TextLabel", G2L["13"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(27, 32, 27);
+G2L["15"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["TextSize"] = 22;
+G2L["15"]["TextColor3"] = Color3.fromRGB(249, 66, 164);
+G2L["15"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[*script hidden*]];
+G2L["15"]["Name"] = [[Hidden]];
+G2L["15"]["Visible"] = false;
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Source.Suggestion
+G2L["16"] = Instance.new("TextButton", G2L["13"]);
+G2L["16"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(40, 40, 40);
+G2L["16"]["TextSize"] = 17;
+G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["16"]["TextColor3"] = Color3.fromRGB(244, 244, 244);
+G2L["16"]["Visible"] = false;
+G2L["16"]["Size"] = UDim2.new(0, 130, 0, 26);
+G2L["16"]["Name"] = [[Suggestion]];
+G2L["16"]["BorderColor3"] = Color3.fromRGB(60, 60, 60);
+G2L["16"]["Text"] = [[keyword]];
+G2L["16"]["AutomaticSize"] = Enum.AutomaticSize.X;
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Source.Suggestion.TextPadding
+G2L["17"] = Instance.new("UIPadding", G2L["16"]);
+G2L["17"]["Name"] = [[TextPadding]];
+G2L["17"]["PaddingLeft"] = UDim.new(0, 30);
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Source.Suggestion.Icon
+G2L["18"] = Instance.new("ImageLabel", G2L["16"]);
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["Image"] = [[rbxassetid://413365069]];
+G2L["18"]["Size"] = UDim2.new(0, 26, 0, 26);
+G2L["18"]["Name"] = [[Icon]];
+G2L["18"]["BackgroundTransparency"] = 1;
+G2L["18"]["Position"] = UDim2.new(0, -30, 0, 0);
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Source.Suggestion.Icon.UIAspectRatioConstraint
+G2L["19"] = Instance.new("UIAspectRatioConstraint", G2L["18"]);
+
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Left
+G2L["1a"] = Instance.new("Frame", G2L["12"]);
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(45, 45, 45);
+G2L["1a"]["Size"] = UDim2.new(0, 27, 1, 0);
+G2L["1a"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["1a"]["Name"] = [[Left]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Left.Right
+G2L["1b"] = Instance.new("Frame", G2L["1a"]);
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(49, 49, 49);
+G2L["1b"]["Size"] = UDim2.new(0, 8, 1, 0);
+G2L["1b"]["Position"] = UDim2.new(1, 0, 0, 0);
+G2L["1b"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["1b"]["Name"] = [[Right]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Left.Right.BottomFade
+G2L["1c"] = Instance.new("UIGradient", G2L["1b"]);
+G2L["1c"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.931, 0),NumberSequenceKeypoint.new(1.000, 1)};
+G2L["1c"]["Name"] = [[BottomFade]];
+G2L["1c"]["Rotation"] = 90;
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Left.Right.Shadow
+G2L["1d"] = Instance.new("Frame", G2L["1b"]);
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["BackgroundTransparency"] = 0.800000011920929;
+G2L["1d"]["Size"] = UDim2.new(0, 5, 1, 0);
+G2L["1d"]["Position"] = UDim2.new(1, 0, 0, 0);
+G2L["1d"]["AutomaticSize"] = Enum.AutomaticSize.Y;
+G2L["1d"]["Name"] = [[Shadow]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Left.Right.Shadow.UIGradient
+G2L["1e"] = Instance.new("UIGradient", G2L["1d"]);
+G2L["1e"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(1.000, 1)};
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Left.Lines
+G2L["1f"] = Instance.new("TextLabel", G2L["1a"]);
+G2L["1f"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1f"]["TextSize"] = 17;
+G2L["1f"]["TextColor3"] = Color3.fromRGB(242, 242, 242);
+G2L["1f"]["AutomaticSize"] = Enum.AutomaticSize.X;
+G2L["1f"]["Size"] = UDim2.new(1, -5, 1, -7);
+G2L["1f"]["Text"] = [[1]];
+G2L["1f"]["Name"] = [[Lines]];
+G2L["1f"]["BackgroundTransparency"] = 0.9990000128746033;
+G2L["1f"]["Position"] = UDim2.new(0, 5, 0, 7);
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Left.Lines.BottomFade
+G2L["20"] = Instance.new("UIGradient", G2L["1f"]);
+G2L["20"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.931, 0),NumberSequenceKeypoint.new(1.000, 1)};
+G2L["20"]["Name"] = [[BottomFade]];
+G2L["20"]["Rotation"] = 90;
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Left.AdaptSize
+G2L["21"] = Instance.new("LocalScript", G2L["1a"]);
+G2L["21"]["Name"] = [[AdaptSize]];
+
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Left.BottomFade
+G2L["22"] = Instance.new("UIGradient", G2L["1a"]);
+G2L["22"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.931, 0),NumberSequenceKeypoint.new(1.000, 1)};
+G2L["22"]["Name"] = [[BottomFade]];
+G2L["22"]["Rotation"] = 90;
+
+-- StarterGui.Main.Frame.TextButton
+G2L["23"] = Instance.new("TextButton", G2L["2"]);
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["TextSize"] = 14;
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["23"]["Position"] = UDim2.new(0.10687022656202316, 0, 0.733137845993042, 0);
+
+-- StarterGui.Main.Frame.TextButton.LocalScript
+G2L["24"] = Instance.new("LocalScript", G2L["23"]);
+
+
+-- StarterGui.Main.Frame.LocalScript
+G2L["25"] = Instance.new("LocalScript", G2L["2"]);
+
+
+-- Require G2L wrapper
+local G2L_REQUIRE = require;
+local G2L_MODULES = {};
+local function require(Module:ModuleScript)
+    local ModuleState = G2L_MODULES[Module];
+    if ModuleState then
+        if not ModuleState.Required then
+            ModuleState.Required = true;
+            ModuleState.Value = ModuleState.Closure();
+        end
+        return ModuleState.Value;
+    end;
+    return G2L_REQUIRE(Module);
+end
+
+G2L_MODULES[G2L["5"]] = {
+Closure = function()
+    local script = G2L["5"];
+-- Lexer by sleitnick
+-- Everything else by me, bread. lol.
+
+
+local module = {}
+
+local syntax 	   = require(script.Syntax)
+local getLines 	   = require(script.GetLines)
+local fakeEditor   = require(script.FakeEditor)
+local textFixer    = require(script.TextFixer)
+local getLine 	   = require(script.GetLine)
+local tween 	   = require(script.TweenLibrary)
+local suggestions  = require(script.Suggestions)
+
+function module.new(frame)
+	local newEditor = script.Editor:Clone()
+	newEditor.Parent = frame
+
+	local editorObj  	= fakeEditor.new(newEditor)
+	local textbox 	 	= newEditor.Scroll.Source
+	local linesLabel 	= newEditor.Scroll.Left.Lines
+	local lineHighlight = textbox.LineHighlight
+
+	local highlightBox = Instance.new("TextLabel")
+	highlightBox.Size = UDim2.new(1, 0,1, 0)
+	highlightBox.Position = UDim2.new(0, 0,0, 0)
+	highlightBox.TextColor3 = textbox.TextColor3
+	highlightBox.BackgroundTransparency = 1
+	highlightBox.Name = "Syntax"
+	highlightBox.RichText = true
+	highlightBox.TextSize = textbox.TextSize
+	highlightBox.Font = textbox.Font
+	highlightBox.TextXAlignment = Enum.TextXAlignment.Left
+	highlightBox.TextYAlignment = Enum.TextYAlignment.Top
+	highlightBox.TextStrokeColor3 = Color3.fromRGB(40, 40, 40)
+	highlightBox.TextStrokeTransparency = 0.1
+	highlightBox.Text = ""
+	highlightBox.Parent = textbox
+	
+	editorObj:SetTheme("default")
+	textFixer.Fix(highlightBox)
+	suggestions:Start(newEditor)
+
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		syntax.Highlight(highlightBox, textbox.Text)
+
+		-- Fix tabs
+		textbox.Text = textbox.Text:gsub("\t", "    ")
+		--textbox.CursorPosition += 4
+		
+		-- Update line count
+		linesLabel.Text = getLines.GetLinesString(textbox.Text)
+	end)
+	
+	textbox:GetPropertyChangedSignal("CursorPosition"):Connect(function()
+		-- Position line highlight
+		local lineYPos = ((getLine:GetCurrentLine(textbox) * textbox.TextSize) - math.ceil(lineHighlight.AbsoluteSize.Y / 2)) + 4
+
+		if lineYPos ~= lineHighlight.Position.Y.Offset then
+			tween.TweenPosition(lineHighlight, UDim2.new(0, -10,0, lineYPos), 0.1, Enum.EasingStyle.Quad)
+		end
+	end)
+
+	return editorObj
+end
+
+return module
+
+end;
+};
+G2L_MODULES[G2L["6"]] = {
+Closure = function()
+    local script = G2L["6"];
+local module = {}
+
+local lexer 	= require(script.Parent.Lexer)
+local theme 	= require(script.Parent.Theme)
+local textFixer = require(script.Parent.TextFixer)
+
+local function ColorToFont(text, color)
+	return string.format(
+		'<font color="rgb(%s,%s,%s)">%s</font>',
+		tostring(math.floor(color.R * 255)),
+		tostring(math.floor(color.G * 255)),
+		tostring(math.floor(color.B * 255)),
+		text
+	)
+end
+
+function module.Highlight(textbox, source)
+	textbox.Text = ""
+
+	for tokenType, text in lexer.scan(source) do
+		local currentTheme = theme.current
+		local tokenCol = currentTheme[tokenType]
+
+		if tokenCol then
+			textbox.Text = textbox.Text .. ColorToFont(text, tokenCol)
+		else
+			textbox.Text = textbox.Text .. text
+		end
+	end
+
+	textFixer.Fix(textbox)
+end
+
+return module
+
+end;
+};
+G2L_MODULES[G2L["7"]] = {
+Closure = function()
+    local script = G2L["7"];
+local theme = {
+	current = nil,
+	themes = {
+		["default"] = {
+			["keyword"] = Color3.fromRGB(248, 109, 124),
+			["builtin"] = Color3.fromRGB(84, 184, 247),
+			["string"] = Color3.fromRGB(130, 241, 149),
+			["number"] = Color3.fromRGB(255, 198, 0),
+			["comment"] = Color3.fromRGB(106, 106, 100),
+			["thingy"] = Color3.fromRGB(253, 251, 154)
+		},
+		["extra 2"] = {
+			["keyword"] = Color3.fromRGB(249, 36, 114),
+			["builtin"] = Color3.fromRGB(95, 209, 250),
+			["string"] = Color3.fromRGB(217, 219, 88),
+			["number"] = Color3.fromRGB(161, 118, 209),
+			["comment"] = Color3.fromRGB(116, 122, 101),
+			["thingy"] = Color3.fromRGB(248, 245, 139)
+		}
+	}
+}
+
+return theme
+
+end;
+};
+G2L_MODULES[G2L["8"]] = {
+Closure = function()
+    local script = G2L["8"];
+local module = {}
+
+function module.GetLines(text)
+	local amount = 1
+	
+	text:gsub("\n", function()
+		amount += 1
+	end)
+	
+	return amount
+end
+
+function module.GetLinesString(text)
+	local lineAmt = module.GetLines(text)
+	local result = ""
+	
+	for i = 1, lineAmt do
+		result = result .. i .. "\n"
+	end
+	
+	-- Remove last \n
+	result = result:sub(1, #result - 1)
+	
+	return result
+end
+
+return module
+
+end;
+};
+G2L_MODULES[G2L["9"]] = {
+Closure = function()
+    local script = G2L["9"];
+local fakeEditor = {} -- Main module
+
+local textFixer = require(script.Parent.TextFixer)
+local theme = require(script.Parent.Theme)
+local syntax = require(script.Parent.Syntax)
+
+local editorObj = {
+	SetTextSize = function(self, textSize)
+		local sourceBox = self.Editor.Scroll.Source
+		local syntaxBox = sourceBox.Syntax
+		local linesBox = self.Editor.Scroll.Left.Lines
+		local lineHighlight = sourceBox.LineHighlight
+
+		sourceBox.TextSize = textSize
+		syntaxBox.TextSize = textSize
+		linesBox.TextSize = textSize
+		lineHighlight.Size = UDim2.new(1, 0,0, textSize + 5)
+		
+		
+		--[[
+			Might want to fix it manually because adding another \n
+			might cause some instability
+		]]
+		textFixer.Fix(self.Editor.Scroll.Source.Syntax)
+
+		return textSize
+	end,
+	Destroy = function(self)
+		self.Editor:Destroy()
+		setmetatable(self, {__index = nil})
+		table.clear(self)
+		self = nil
+
+		return nil
+	end,
+	GetText = function(self)
+		local sourceBox = self.Editor.Scroll.Source
+		return sourceBox.Text
+	end,
+	SetText = function(self, text)
+		local sourceBox = self.Editor.Scroll.Source
+		sourceBox.Text = text
+
+		return text
+	end,
+	ContentToBytes = function(self)
+		local text = self.Editor.Scroll.Source.Text
+		local bytes = {}
+		
+		for _, c in pairs(text:split("")) do
+			table.insert(bytes, string.byte(c))
+		end
+		
+		return "/" .. table.concat(bytes, "/")
+	end,
+	Hide = function(self)
+		local hiddenLabel = self.Editor.Scroll.Source.Hidden
+		hiddenLabel.Visible = true
+	end,
+	Unhide = function(self)
+		local hiddenLabel = self.Editor.Scroll.Source.Hidden
+		hiddenLabel.Visible = false
+	end,
+	SetTheme = function(self, themeName)
+		local sourceBox = self.Editor.Scroll.Source
+		local syntaxBox = sourceBox.Syntax
+		
+		assert(theme.themes[themeName], "'" .. themeName .. "' is not a valid theme.")
+		
+		theme.current = theme.themes[themeName]
+		
+		-- Update highlighting
+		syntax.Highlight(syntaxBox, sourceBox.Text)
+	end,
+}
+
+function fakeEditor.new(editor)
+	return setmetatable({Editor = editor}, {__index = editorObj})
+end
+
+return fakeEditor
+
+end;
+};
+G2L_MODULES[G2L["a"]] = {
+Closure = function()
+    local script = G2L["a"];
+-- Fixes a Roblox bug with RichText
+
+-- If the bug gets fixed, this will break the editor (visually).
+-- In this case, please remove any instances of this module being used.
+
+local module = {}
+
+function module.Fix(textbox)
+	if textbox.Text:sub(1, 1) ~= "\n" then
+		textbox.Text = "\n" .. textbox.Text
+	end
+	
+	textbox.Position = UDim2.new(0, -3,0,-textbox.TextSize)
+	textbox.Size = UDim2.new(1, 4,1, textbox.TextSize)
+end
+
+return module
+
+end;
+};
+G2L_MODULES[G2L["b"]] = {
+Closure = function()
+    local script = G2L["b"];
+local module = {}
+
+function module.peekBack(self)
+	return self.text:sub(self.position - 1, self.position - 1)
+end
+
+function module.next(self)
+	self.position += 1
+	
+	self.character = self.text:sub(self.position, self.position)
+	
+	if self.character == "\n" then
+		self.lines += 1
+	end
+	
+	if self.position < #self.text and self.position < self.cursorPosition then
+		self:next()
+	end
+end
+
+function module.GetCurrentLine(self, textbox)
+	self.position = 0
+	self.text = textbox.Text .. " "
+	self.cursorPosition = textbox.CursorPosition
+	self.lines = 1
+	
+	self:next()
+	
+	return self.lines
+end
+
+function module.GetCurrentLineWidth(self, textbox)
+	self.position = 0
+	self.text = textbox.Text .. " "
+	self.cursorPosition = textbox.CursorPosition
+	self.lines = 1
+
+	self:next()
+	
+	-- self.lines is the current line
+
+	return self.position
+end
+
+return module
+
+end;
+};
+G2L_MODULES[G2L["c"]] = {
+Closure = function()
+    local script = G2L["c"];
+local module = {}
+
+local tweenService = game:GetService("TweenService")
+local debris = game:GetService("Debris")
+
+-- Custom functions
+local function default(arg, def)
+	if arg == nil then
+		arg = def
+	end
+	return arg
+end
+
+-- Guis --
+
+function module.TweenScale(frame, scale, timelen, easingstyle, easingdir)
+	local uiscale
+	if not frame:FindFirstChild("$ScaleAnim") then
+		uiscale = Instance.new("UIScale")
+		uiscale.Scale = 1
+		uiscale.Name = "$ScaleAnim"
+		uiscale.Parent = frame
+	end
+	
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		Scale = scale
+	}
+
+	-- Finally, play tween
+	tweenService:Create(uiscale, tinfo, goals):Play()
+	--debris:AddItem(uiscale, timelen) -- Remove it when animation is done
+end
+
+function module.TweenPosition(frame, position, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(position, "No position provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+	
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		Position = position
+	}
+	
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenSize(frame, size, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(size, "No size provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		Size = size
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenBackgroundColor3(frame, color, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(color, "No color provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		BackgroundColor3 = color
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenBackgroundTransparency(frame, transparency, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(transparency, "No transparency provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		BackgroundTransparency = transparency
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenBorderColor3(frame, color, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(color, "No color provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		BorderColor3 = color
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenBorderSizePixel(frame, bordersize, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(bordersize, "No border size provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		BorderSizePixel = bordersize
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenImageTransparency(frame, imagetransparency, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(imagetransparency, "No image transparency provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		ImageTransparency = imagetransparency
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenImageColor3(frame, color, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(color, "No color provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		ImageColor3 = color
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenImageRectOffset(frame, offset, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(offset, "No offset provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		ImageRectOffset = offset
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenImageRectSize(frame, size, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(size, "No size provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		ImageRectSize = size
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenSliceScale(frame, scale, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(scale, "No scale provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		SliceScale = scale
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenTextColor3(frame, color, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(color, "No color provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		TextColor3 = color
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenMaxVisibleGraphemes(frame, graphemes, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(graphemes, "No graphemes provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		MaxVisibleGraphemes = graphemes
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenTextSize(frame, size, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(size, "No size provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		TextSize = size
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenTextStrokeColor3(frame, color, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(color, "No color provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		TextStrokeColor3 = color
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenTextTransparency(frame, transparency, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(transparency, "No transparency provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		TextTransparency = transparency
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenTextStrokeTransparency(frame, transparency, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(transparency, "No transparency provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		TextStrokeTransparency = transparency
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenCanvasSize(frame, size, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(size, "No size provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		CanvasSize = size
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenCanvasPosition(frame, position, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(position, "No position provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		CanvasPosition = position
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenScrollBarImageTransparency(frame, transparency, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(transparency, "No transparency provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		ScrollBarImageTransparency = transparency
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenScrollBarThickness(frame, thickness, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(thickness, "No thickness provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		ScrollBarThickness = thickness
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenScrollBarImageColor3(frame, color, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(frame, "No frame provided")
+	assert(color, "No color provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		ScrollBarImageColor3 = color
+	}
+
+	-- Finally, play tween
+	tweenService:Create(frame, tinfo, goals):Play()
+end
+
+function module.TweenCFrame(thing, cframe, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(thing, "No instance provided")
+	assert(cframe, "No cframe provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		CFrame = cframe
+	}
+
+	-- Finally, play tween
+	tweenService:Create(thing, tinfo, goals):Play()
+end
+
+function module.TweenFOV(thing, fov, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(thing, "No instance provided")
+	assert(fov, "No FOV provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		FieldOfView = fov
+	}
+
+	-- Finally, play tween
+	tweenService:Create(thing, tinfo, goals):Play()
+end
+
+function module.TweenValue(thing, value, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(thing, "No instance provided")
+	assert(value, "No value provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		Value = value
+	}
+
+	-- Finally, play tween
+	tweenService:Create(thing, tinfo, goals):Play()
+end
+
+function module.TweenVolume(thing, volume, timelen, easingstyle, easingdir)
+	-- Errors & defaults
+	assert(thing, "No instance provided")
+	assert(volume, "No volume provided")
+	assert(timelen, "No time length provided")
+	easingstyle = default(easingstyle, Enum.EasingStyle.Sine)
+	easingdir = default(easingdir, Enum.EasingDirection.Out)
+
+	-- Generate tween info
+	local tinfo = TweenInfo.new(timelen, easingstyle, easingdir)
+	local goals = {
+		Volume = volume
+	}
+
+	-- Finally, play tween
+	tweenService:Create(thing, tinfo, goals):Play()
+end
+
+return module
+
+end;
+};
+G2L_MODULES[G2L["d"]] = {
+Closure = function()
+    local script = G2L["d"];
+local module = {}
+
+function module.next(self)
+	self.position += 1
+	local character = self.text:sub(self.position, self.position)
+	
+	if character == "\n" or character == " " or self.position > #self.text then
+		return self.position - 1
+	else
+		return self:next()
+	end
+end
+
+function module.prev(self)
+	self.position -= 1
+	local character = self.text:sub(self.position, self.position)
+
+	if character == "\n" or character == " " or self.position < 1 then
+		return self.position + 1
+	else
+		return self:prev()
+	end
+end
+
+function module.GetCurrentWord(self, textbox)
+	self.cursorPosition = textbox.CursorPosition
+	self.position = self.cursorPosition
+	self.text = textbox.Text
+	
+	local wordEnd = self:next()
+	local wordStart = self:prev()
+	local wordString = self.text:sub(wordStart, wordEnd)
+	
+	return wordString
+end
+
+return module
+
+end;
+};
+G2L_MODULES[G2L["e"]] = {
+Closure = function()
+    local script = G2L["e"];
+--[[
+
+	Lexical scanner for creating a sequence of tokens from Lua source code.
+
+	This is a heavily modified and Roblox-optimized version of
+	the original Penlight Lexer module:
+		https://github.com/stevedonovan/Penlight
+
+	Authors:
+		stevedonovan <https://github.com/stevedonovan> ----------------- Original Penlight lexer author
+		ryanjmulder  <https://github.com/ryanjmulder>  ----------------- Penlight lexer contributer
+		mpeterv      <https://github.com/mpeterv>      ----------------- Penlight lexer contributer
+		Tieske       <https://github.com/Tieske>       ----------------- Penlight lexer contributer
+		boatbomber   <https://github.com/boatbomber>   ----------------- Roblox port, optimizations, and bug fixes
+		Sleitnick    <https://github.com/Sleitnick>    ----------------- Roblox optimizations
+
+	Usage:
+
+		local source = "for i = 1,n do end"
+		
+		-- The 'scan' function returns a token iterator:
+		for token,src in lexer.scan(source) do
+			print(token, src)
+		end
+
+			> keyword for
+			> iden    i
+			> =       =
+			> number  1
+			> ,       ,
+			> iden    n
+			> keyword do
+			> keyword end
+
+	List of tokens:
+		- keyword
+		- builtin
+		- iden
+		- string
+		- number
+		- space
+		- comment
+
+	Other tokens that don't fall into the above categories
+	will simply be returned as itself. For instance, operators
+	like "+" will simply return "+" as the token.
+
+--]]
+
+local lexer = {}
+
+local yield, wrap  = coroutine.yield, coroutine.wrap
+local strfind      = string.find
+local strsub       = string.sub
+local append       = table.insert
+local type         = type
+
+local NUMBER1	= "^[%+%-]?%d+%.?%d*[eE][%+%-]?%d+"
+local NUMBER2	= "^[%+%-]?%d+%.?%d*"
+local NUMBER3	= "^0x[%da-fA-F]+"
+local NUMBER4	= "^%d+%.?%d*[eE][%+%-]?%d+"
+local NUMBER5	= "^%d+%.?%d*"
+local IDEN		= "^[%a_][%w_]*"
+local WSPACE	= "^%s+"
+local STRING1	= "^(['\"])%1"							--Empty String
+local STRING2	= [[^(['"])(\*)%2%1]]
+local STRING3	= [[^(['"]).-[^\](\*)%2%1]]
+local STRING4	= "^(['\"]).-.*"						--Incompleted String
+local STRING5	= "^%[(=*)%[.-%]%1%]"					--Multiline-String
+local STRING6	= "^%[%[.-.*"							--Incompleted Multiline-String
+local CHAR1		= "^''"
+local CHAR2		= [[^'(\*)%1']]
+local CHAR3		= [[^'.-[^\](\*)%1']]
+local PREPRO	= "^#.-[^\\]\n"
+local MCOMMENT1	= "^%-%-%[(=*)%[.-%]%1%]"				--Completed Multiline-Comment
+local MCOMMENT2	= "^%-%-%[%[.-.*"						--Incompleted Multiline-Comment
+local SCOMMENT1	= "^%-%-.-\n"							--Completed Singleline-Comment
+local SCOMMENT2	= "^%-%-.-.*"							--Incompleted Singleline-Comment
+local THINGY 	= "^[%.:]%w-%s?%(.-%)"
+
+local lua_keyword = {
+	["and"] = true,  ["break"] = true,  ["do"] = true,      ["else"] = true,      ["elseif"] = true,
+	["end"] = true,  ["false"] = true,  ["for"] = true,     ["function"] = true,  ["if"] = true,
+	["in"] = true,   ["local"] = true,  ["nil"] = true,     ["not"] = true,       ["while"] = true,
+	["or"] = true,   ["repeat"] = true, ["return"] = true,  ["then"] = true,      ["true"] = true,
+	["self"] = true, ["until"] = true
+}
+
+local lua_builtin = {
+	["assert"] = true;["collectgarbage"] = true;["error"] = true;["_G"] = true;
+	["gcinfo"] = true;["getfenv"] = true;["getmetatable"] = true;["ipairs"] = true;
+	["loadstring"] = true;["newproxy"] = true;["next"] = true;["pairs"] = true;
+	["pcall"] = true;["print"] = true;["rawequal"] = true;["rawget"] = true;["rawset"] = true;
+	["select"] = true;["setfenv"] = true;["setmetatable"] = true;["tonumber"] = true;
+	["tostring"] = true;["type"] = true;["unpack"] = true;["_VERSION"] = true;["xpcall"] = true;
+	["delay"] = true;["elapsedTime"] = true;["require"] = true;["spawn"] = true;["tick"] = true;
+	["time"] = true;["typeof"] = true;["UserSettings"] = true;["wait"] = true;["warn"] = true;
+	["game"] = true;["Enum"] = true;["script"] = true;["shared"] = true;["workspace"] = true;
+	["Axes"] = true;["BrickColor"] = true;["CFrame"] = true;["Color3"] = true;["ColorSequence"] = true;
+	["ColorSequenceKeypoint"] = true;["Faces"] = true;["Instance"] = true;["NumberRange"] = true;
+	["NumberSequence"] = true;["NumberSequenceKeypoint"] = true;["PhysicalProperties"] = true;
+	["Random"] = true;["Ray"] = true;["Rect"] = true;["Region3"] = true;["Region3int16"] = true;
+	["TweenInfo"] = true;["UDim"] = true;["UDim2"] = true;["Vector2"] = true;["Vector3"] = true;
+	["Vector3int16"] = true;["next"] = true;
+	["os"] = true;
+		--["os.time"] = true;["os.date"] = true;["os.difftime"] = true;
+	["debug"] = true;
+		--["debug.traceback"] = true;["debug.profilebegin"] = true;["debug.profileend"] = true;
+	["math"] = true;
+		--["math.abs"] = true;["math.acos"] = true;["math.asin"] = true;["math.atan"] = true;["math.atan2"] = true;["math.ceil"] = true;["math.clamp"] = true;["math.cos"] = true;["math.cosh"] = true;["math.deg"] = true;["math.exp"] = true;["math.floor"] = true;["math.fmod"] = true;["math.frexp"] = true;["math.ldexp"] = true;["math.log"] = true;["math.log10"] = true;["math.max"] = true;["math.min"] = true;["math.modf"] = true;["math.noise"] = true;["math.pow"] = true;["math.rad"] = true;["math.random"] = true;["math.randomseed"] = true;["math.sign"] = true;["math.sin"] = true;["math.sinh"] = true;["math.sqrt"] = true;["math.tan"] = true;["math.tanh"] = true;
+	["coroutine"] = true;
+		--["coroutine.create"] = true;["coroutine.resume"] = true;["coroutine.running"] = true;["coroutine.status"] = true;["coroutine.wrap"] = true;["coroutine.yield"] = true;
+	["string"] = true;
+		--["string.byte"] = true;["string.char"] = true;["string.dump"] = true;["string.find"] = true;["string.format"] = true;["string.len"] = true;["string.lower"] = true;["string.match"] = true;["string.rep"] = true;["string.reverse"] = true;["string.sub"] = true;["string.upper"] = true;["string.gmatch"] = true;["string.gsub"] = true;
+	["table"] = true;
+		--["table.concat"] = true;["table.insert"] = true;["table.remove"] = true;["table.sort"] = true;
+}
+
+local function tdump(tok)
+	return yield(tok, tok)
+end
+
+local function ndump(tok)
+	return yield("number", tok)
+end
+
+local function sdump(tok)
+	return yield("string", tok)
+end
+
+local function cdump(tok)
+	return yield("comment", tok)
+end
+
+local function wsdump(tok)
+	return yield("space", tok)
+end
+
+local function lua_vdump(tok)
+	if (lua_keyword[tok]) then
+		return yield("keyword", tok)
+	elseif (lua_builtin[tok]) then
+		return yield("builtin", tok)
+	else
+		return yield("iden", tok)
+	end
+end
+
+local function thingy_dump(tok)
+	return yield("thingy", tok)
+end
+
+local lua_matches = {
+	{THINGY, thingy_dump},
+	
+	{IDEN,      lua_vdump},        -- Indentifiers
+	{WSPACE,    wsdump},           -- Whitespace
+	{NUMBER3,   ndump},            -- Numbers
+	{NUMBER4,   ndump},
+	{NUMBER5,   ndump},
+	{STRING1,   sdump},            -- Strings
+	{STRING2,   sdump},
+	{STRING3,   sdump},
+	{STRING4,   sdump},
+	{STRING5,   sdump},            -- Multiline-Strings
+	{STRING6,   sdump},            -- Multiline-Strings
+	
+	{MCOMMENT1, cdump},            -- Multiline-Comments
+	{MCOMMENT2, cdump},			
+	{SCOMMENT1, cdump},            -- Singleline-Comments
+	{SCOMMENT2, cdump},
+	
+	{"^==",     tdump},            -- Operators
+	{"^~=",     tdump},
+	{"^<=",     tdump},
+	{"^>=",     tdump},
+	{"^%.%.%.", tdump},
+	{"^%.%.",   tdump},
+	{"^.",      tdump},
+}
+
+local num_lua_matches = #lua_matches
+
+
+--- Create a plain token iterator from a string.
+-- @tparam string s a string.
+function lexer.scan(s)
+
+	local function lex(first_arg)
+
+		local line_nr = 0
+		local sz = #s
+		local idx = 1
+
+		-- res is the value used to resume the coroutine.
+		local function handle_requests(res)
+			while (res) do
+				local tp = type(res)
+				-- Insert a token list:
+				if (tp == "table") then
+					res = yield("", "")
+					for i = 1,#res do
+						local t = res[i]
+						res = yield(t[1], t[2])
+					end
+				elseif (tp == "string") then -- Or search up to some special pattern:
+					local i1, i2 = strfind(s, res, idx)
+					if (i1) then
+						local tok = strsub(s, i1, i2)
+						idx = (i2 + 1)
+						res = yield("", tok)
+					else
+						res = yield("", "")
+						idx = (sz + 1)
+					end
+				else
+					res = yield(line_nr, idx)
+				end
+			end
+		end
+
+		handle_requests(first_arg)
+		line_nr = 1
+
+		while (true) do
+
+			if (idx > sz) then
+				while (true) do
+					handle_requests(yield())
+				end
+			end
+
+			for i = 1,num_lua_matches do
+				local m = lua_matches[i]
+				local pat = m[1]
+				local fun = m[2]
+				local findres = {strfind(s, pat, idx)}
+				local i1, i2 = findres[1], findres[2]
+				if (i1) then
+					local tok = strsub(s, i1, i2)
+					idx = (i2 + 1)
+					lexer.finished = (idx > sz)
+					local res = fun(tok, findres)
+					if (tok:find("\n")) then
+						-- Update line number:
+						local _,newlines = tok:gsub("\n", {})
+						line_nr = (line_nr + newlines)
+					end
+					handle_requests(res)
+					break
+				end
+			end
+
+		end
+
+	end
+
+	return wrap(lex)
+
+end
+
+return lexer
+end;
+};
+G2L_MODULES[G2L["f"]] = {
+Closure = function()
+    local script = G2L["f"];
+local module = {}
+
+--// Vars
+local words   = require(script.Parent.Words)
+local GetWord = require(script.Parent.GetWord)
+local getLine = require(script.Parent.GetLine)
+
+--// Funcs
+function module.GetCurrentWord(self)
+	return GetWord:GetCurrentWord(self.Textbox)
+end
+
+function module.Search(self)
+	local currentWord = self:GetCurrentWord():lower()
+	
+	if currentWord == "" and #currentWord <= 1 then
+		return nil
+	end
+	
+	for word, wordType in pairs(words) do
+		local matched = string.match(word:lower(), currentWord)
+		
+		if matched then
+			local foundStart, foundEnd = string.find(word:lower(), currentWord)
+			return word, (foundEnd - foundStart) + 1
+		end
+	end
+	
+	return nil
+end
+
+function module.Start(self, editor)
+	self.Editor = editor
+	self.Textbox = editor.Scroll.Source
+	self.SuggestionButton = self.Textbox.Suggestion
+	
+	self.Textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		local foundWord, matchedLength = self:Search()
+		
+		if foundWord then
+			local position = UDim2.new(0, 0,0, getLine:GetCurrentLine(self.Textbox) * self.Textbox.TextSize)
+			
+			self.SuggestionButton.Text = foundWord
+			self.SuggestionButton.Position = position
+			self.SuggestionButton.Visible = true
+			self.MatchedLength = matchedLength
+		else
+			self.SuggestionButton.Visible = false
+		end
+	end)
+	
+	self.SuggestionButton.MouseButton1Click:Connect(function(input)
+		-- Fill in the word
+		local word = self.SuggestionButton.Text
+		self.SuggestionButton.Visible = false
+		self.Textbox.Text = self.Textbox.Text:sub(1, self.Textbox.CursorPosition - 1 - (self.MatchedLength or 0)) .. word .. self.Textbox.Text:sub(self.Textbox.CursorPosition + 1, #self.Textbox.Text)
+		
+		local newCursorPosition = self.Textbox.CursorPosition + #word - self.MatchedLength
+		wait()
+		self.Textbox:ReleaseFocus()
+		self.Textbox:CaptureFocus()
+		self.Textbox.CursorPosition = newCursorPosition
+	end)
+end
+
+return module
+
+end;
+};
+G2L_MODULES[G2L["10"]] = {
+Closure = function()
+    local script = G2L["10"];
+local words = {
+	['print'] = 'builtin',
+	['warn'] = 'builtin',
+	['Vector3'] = 'builtin',
+	['Vector2'] = 'builtin',
+	['error'] = 'builtin',
+	['Instance'] = 'builtin',
+	['game'] = 'builtin',
+	['script'] = 'builtin',
+	['workspace'] = 'builtin',
+	
+	['while'] = 'keyword',
+	['true'] = 'keyword',
+	['false'] = 'keyword',
+	['then'] = 'keyword',
+	['do'] = 'keyword',
+	['if'] = 'keyword',
+}
+
+return words
+
+end;
+};
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX
+local function C_4()
+local script = G2L["4"];
+	local ScriptEditor = require(script.ScriptEditor)
+	
+	local editor = ScriptEditor.new(script.Parent)
+	editor:SetTheme("extra 2")
+	editor:SetText("hi")
+end;
+task.spawn(C_4);
+-- StarterGui.Main.Frame.TextBox.PUTONTEXTBOX.ScriptEditor.Editor.Scroll.Left.AdaptSize
+local function C_21()
+local script = G2L["21"];
+	local defaultSize = script.Parent.Size
+	local textbox = script.Parent.Parent.Source
+	
+	textbox:GetPropertyChangedSignal("AbsoluteSize"):Connect(function()
+		local height = textbox.AbsoluteSize.Y
+		
+		script.Parent.Size = UDim2.new(
+			defaultSize.X.Scale,
+			defaultSize.X.Offset,
+			0,
+			height
+		)
+	end)
+end;
+task.spawn(C_21);
+-- StarterGui.Main.Frame.TextButton.LocalScript
+local function C_24()
+local script = G2L["24"];
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(script.Parent.Parent.TextBox.Editor.Scroll.Source.Text)
+	end)
+end;
+task.spawn(C_24);
+-- StarterGui.Main.Frame.LocalScript
+local function C_25()
+local script = G2L["25"];
+	script.Parent.Draggable = true
+end;
+task.spawn(C_25);
+
+return G2L["1"], require;
