@@ -1,0 +1,269 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local logo = Instance.new("TextLabel")
+local skiddedlabel = Instance.new("TextLabel")
+local credit = Instance.new("TextLabel")
+local booster2 = Instance.new("TextButton")
+local booster1 = Instance.new("TextButton")
+local hide = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.432935894, 0, 0.0453987792, 0)
+Frame.Size = UDim2.new(0, 676, 0, 455)
+Frame.Active = true
+Frame.Draggable = true
+
+logo.Name = "logo"
+logo.Parent = Frame
+logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+logo.BorderColor3 = Color3.fromRGB(255, 255, 255)
+logo.Size = UDim2.new(0, 200, 0, 50)
+logo.Font = Enum.Font.SourceSans
+logo.Text = "FPS+"
+logo.TextColor3 = Color3.fromRGB(0, 0, 0)
+logo.TextScaled = true
+logo.TextSize = 14.000
+logo.TextWrapped = true
+
+skiddedlabel.Name = "skiddedlabel"
+skiddedlabel.Parent = Frame
+skiddedlabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+skiddedlabel.BorderColor3 = Color3.fromRGB(255, 255, 255)
+skiddedlabel.Position = UDim2.new(0, 0, 0.890109897, 0)
+skiddedlabel.Size = UDim2.new(0, 200, 0, 50)
+skiddedlabel.Font = Enum.Font.SourceSans
+skiddedlabel.Text = "Everythings Skidded"
+skiddedlabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+skiddedlabel.TextScaled = true
+skiddedlabel.TextSize = 14.000
+skiddedlabel.TextWrapped = true
+
+credit.Name = "credit"
+credit.Parent = Frame
+credit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+credit.BorderColor3 = Color3.fromRGB(255, 255, 255)
+credit.Position = UDim2.new(0.703129292, 0, 0.890109897, 0)
+credit.Size = UDim2.new(0, 200, 0, 50)
+credit.Font = Enum.Font.SourceSans
+credit.Text = "Made by TheMagicPiston"
+credit.TextColor3 = Color3.fromRGB(0, 0, 0)
+credit.TextScaled = true
+credit.TextSize = 14.000
+credit.TextWrapped = true
+
+booster2.Name = "booster2"
+booster2.Parent = Frame
+booster2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+booster2.Position = UDim2.new(0.351169914, 0, 0.443956077, 0)
+booster2.Size = UDim2.new(0, 200, 0, 50)
+booster2.Font = Enum.Font.SourceSans
+booster2.Text = "Booster 2"
+booster2.TextColor3 = Color3.fromRGB(0, 0, 0)
+booster2.TextSize = 14.000
+booster2.MouseButton1Down:connect(function()
+	local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+	local g = game
+	local w = g.Workspace
+	local l = g.Lighting
+	local t = w.Terrain
+	t.WaterWaveSize = 0
+	t.WaterWaveSpeed = 0
+	t.WaterReflectance = 0
+	t.WaterTransparency = 0
+	l.GlobalShadows = false
+	l.FogEnd = 9e9
+	l.Brightness = 0
+	settings().Rendering.QualityLevel = "Level01"
+	for i, v in pairs(g:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") then
+			v.Enabled = false
+		elseif v:IsA("MeshPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+			v.TextureID = 10385902758728957
+		end
+	end
+	for i, e in pairs(l:GetChildren()) do
+		if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+			e.Enabled = false
+		end
+	end
+end)
+
+booster1.Name = "booster1"
+booster1.Parent = Frame
+booster1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+booster1.Position = UDim2.new(0.351169914, 0, 0.303296715, 0)
+booster1.Size = UDim2.new(0, 200, 0, 50)
+booster1.Font = Enum.Font.SourceSans
+booster1.Text = "Booster 1"
+booster1.TextColor3 = Color3.fromRGB(0, 0, 0)
+booster1.TextSize = 14.000
+booster1.MouseButton1Down:connect(function()
+	_G.Settings = {
+		Players = {
+			["Ignore Me"] = true, -- Ignore your Character
+			["Ignore Others"] = true -- Ignore other Characters
+		},
+		Meshes = {
+			Destroy = false, -- Destroy Meshes
+			LowDetail = true -- Low detail meshes (NOT SURE IT DOES ANYTHING)
+		},
+		Images = {
+			Invisible = true, -- Invisible Images
+			LowDetail = false, -- Low detail images (NOT SURE IT DOES ANYTHING)
+			Destroy = false, -- Destroy Images
+		},
+		["No Particles"] = true, -- Disables all ParticleEmitter, Trail, Smoke, Fire and Sparkles
+		["No Camera Effects"] = true, -- Disables all PostEffect's (Camera/Lighting Effects)
+		["No Explosions"] = true, -- Makes Explosion's invisible
+		["No Clothes"] = true, -- Removes Clothing from the game
+		["Low Water Graphics"] = true, -- Removes Water Quality
+		["No Shadows"] = true, -- Remove Shadows
+		["Low Rendering"] = true, -- Lower Rendering
+		["Low Quality Parts"] = true -- Lower quality parts
+	}
+	local Players = game:GetService("Players")
+	local BadInstances = {"DataModelMesh", "FaceInstance", "ParticleEmitter", "Trail", "Smoke", "Fire", "Sparkles", "PostEffect", "Explosion", "Clothing", "BasePart"}
+	local CanBeEnabled = {"ParticleEmitter", "Trail", "Smoke", "Fire", "Sparkles", "PostEffect"}
+	local function PartOfCharacter(Instance)
+		for i, v in pairs(Players:GetPlayers()) do
+			if v.Character and Instance:IsDescendantOf(v.Character) then
+				return true
+			end
+		end
+		return false
+	end
+	local function ReturnDescendants()
+		local Descendants = {}
+		WaitNumber = 5000
+		if _G.Settings.Players["Ignore Others"] then
+			for i, v in pairs(game:GetDescendants()) do
+				if not v:IsDescendantOf(Players) and not PartOfCharacter(v) then
+					for i2, v2 in pairs(BadInstances) do
+						if v:IsA(v2) then
+							table.insert(Descendants, v)
+						end
+					end
+				end
+				if i == WaitNumber then
+					task.wait()
+					WaitNumber = WaitNumber + 5000
+				end
+			end
+		elseif _G.Settings.Players["Ignore Me"] then
+			for i, v in pairs(game:GetDescendants()) do
+				if not v:IsDescendantOf(Players) and not v:IsDescendantOf(ME.Character) then
+					for i2, v2 in pairs(BadInstances) do
+						if v:IsA(v2) then
+							table.insert(Descendants, v)
+						end
+					end
+				end
+				if i == WaitNumber then
+					task.wait()
+					WaitNumber = WaitNumber + 5000
+				end
+			end
+		end
+		return Descendants
+	end
+	local function CheckIfBad(Instance)
+		if not Instance:IsDescendantOf(Players) and not PartOfCharacter(Instance) then
+			if Instance:IsA("DataModelMesh") then
+				if _G.Settings.Meshes.LowDetail then
+					sethiddenproperty(Instance, "LODX", Enum.LevelOfDetailSetting.Low)
+					sethiddenproperty(Instance, "LODY", Enum.LevelOfDetailSetting.Low)
+				elseif _G.Settings.Meshes.Destroy then
+					Instance:Destroy()
+				end
+			elseif Instance:IsA("FaceInstance") then
+				if _G.Settings.Images.Invisible then
+					Instance.Transparency = 1
+				elseif _G.Settings.Images.LowDetail then
+					Instance.Shiny = 1
+				elseif _G.Settings.Images.Destroy then
+					Instance:Destroy()
+				end
+			elseif table.find(CanBeEnabled, Instance.ClassName) then
+				if _G.Settings["No Particles"] or (_G.Settings.Other and _G.Settings.Other["No Particles"]) then
+					Instance.Enabled = false
+				end
+			elseif Instance:IsA("Explosion") then
+				if _G.Settings["No Explosions"] or (_G.Settings.Other and _G.Settings.Other["No Explosions"]) then
+					Instance.Visible = false
+				end
+			elseif Instance:IsA("Clothing") then
+				if _G.Settings["No Clothes"] or (_G.Settings.Other and _G.Settings.Other["No Clothes"]) then
+					Instance:Destroy()
+				end
+			elseif Instance:IsA("BasePart") then
+				if _G.Settings["Low Quality Parts"] or (_G.Settings.Other and _G.Settings.Other["Low Quality Parts"]) then
+					Instance.Material = Enum.Material.Plastic
+					Instance.Reflectance = 0
+				end
+			end
+		end
+	end
+	if _G.Settings["Low Water Graphics"] or (_G.Settings.Other and _G.Settings.Other["Low Water Graphics"]) then
+		workspace:FindFirstChildOfClass("Terrain").WaterWaveSize = 0
+		workspace:FindFirstChildOfClass("Terrain").WaterWaveSpeed = 0
+		workspace:FindFirstChildOfClass("Terrain").WaterReflectance = 0
+		workspace:FindFirstChildOfClass("Terrain").WaterTransparency = 0
+	end
+	if _G.Settings["No Shadows"] or (_G.Settings.Other and _G.Settings.Other["No Shadows"]) then
+		game:GetService("Lighting").GlobalShadows = false
+		game:GetService("Lighting").FogEnd = 9e9
+	end
+	if _G.Settings["Low Rendering"] or (_G.Settings.Other and _G.Settings.Other["Low Rendering"]) then
+		settings().Rendering.QualityLevel = 1
+	end
+end)
+
+hide.Name = "hide"
+hide.Parent = Frame
+hide.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hide.BorderColor3 = Color3.fromRGB(255, 255, 255)
+hide.Position = UDim2.new(0.703129292, 0, 0, 0)
+hide.Size = UDim2.new(0, 200, 0, 50)
+hide.Font = Enum.Font.SourceSans
+hide.Text = "To hide gui press p"
+hide.TextColor3 = Color3.fromRGB(0, 0, 0)
+hide.TextScaled = true
+hide.TextSize = 14.000
+hide.TextWrapped = true
+
+-- Scripts:
+
+local function EOOUOQ_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	player = game.Players.LocalPlayer
+	
+	player:GetMouse().KeyDown:Connect(function(key)
+		if key == "p" and script.Parent.Visible == false then
+			script.Parent.Visible = true
+		else
+			if key == "p" and script.Parent.Visible == true then
+				script.Parent.Visible = false
+			end
+		end
+	end)
+end
+coroutine.wrap(EOOUOQ_fake_script)()
