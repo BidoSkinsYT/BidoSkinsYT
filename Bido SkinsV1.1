@@ -1,0 +1,871 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+
+local Window = Library.CreateLib("Bido Skins V1.1", "BloodTheme")
+
+-- Tabs
+
+local Tab1 = Window:NewTab("Main")
+
+local Tab1Section = Tab1:NewSection("Main")
+
+-- Buttons/Windows/Idk
+
+Tab1Section:NewButton("Universal Fly", "make you fly", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/gaz0U0XX"))();
+
+    end)
+
+    
+
+Tab1Section:NewButton("Fly Gui V3", "make you fly", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Fly%20Gui%20V3"))()
+
+end)
+
+Tab1Section:NewButton("Hitbox", "kill ppl easy", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Hitbox%20script"))()
+
+end)
+
+Tab1Section:NewButton("Rejoin button when disconnected", "join your server if disconnected", function()
+
+--Auto execute highly recommended (use it)
+
+gui = game.CoreGui.RobloxPromptGui.promptOverlay:WaitForChild("ErrorPrompt")
+
+gui.Size = UDim2.new(0, 400, 0, 230)
+
+leave = gui.MessageArea.ErrorFrame.ButtonArea.LeaveButton
+
+gui.MessageArea.MessageAreaPadding.PaddingTop = UDim.new(0,-20)
+
+gui.MessageArea.ErrorFrame.ErrorFrameLayout.Padding = UDim.new(0, 5)
+
+gui.MessageArea.ErrorFrame.ButtonArea.ButtonLayout.CellPadding = UDim2.new(0, 0, 0, 5)
+
+rejoin = leave:Clone()
+
+rejoin.Parent = leave.Parent
+
+rejoin.ButtonText.Text = "Rejoin"
+
+Players = game:GetService("Players")
+
+TeleportService = game:GetService("TeleportService")
+
+rejoin.MouseButton1Up:Connect(function()
+
+	if #Players:GetPlayers() <= 1 then		TeleportService:Teleport(game.PlaceId, Players.LocalPlayer)
+
+	else
+
+		TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, Players.LocalPlayer)
+
+	end
+
+end)
+
+end)
+
+local Tab2 = Window:NewTab("Hubs")
+
+local Tab2Section = Tab2:NewSection("Hubs")
+
+Tab2Section:NewButton("Vhub V1.36", "Hub has Scripts", function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/2642/Created/VHub"))()
+
+ end)
+
+ 
+
+ local Tab3 = Window:NewTab("Fe Scripts")
+
+ local Tab3Section = Tab3:NewSection("Fe Scripts")
+
+ Tab3Section:NewButton("Fe Freeze", "Freeze yourself", function()
+
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/creepstu/fuzzy-octo-giggle/main/Source'))()
+
+ end)
+
+ 
+
+ Tab3Section:NewButton("Fe Oribit Tools", "oribit tools", function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Tool"))()
+
+ end)
+
+ 
+
+ Tab3Section:NewButton("Fe chat translater hub", "translate chat", function()
+
+ pcall(function()   loadstring(       --[[        ░░░░░██╗  ███╗░░░███╗███████╗███╗░░░███╗███████╗       ░░░░░██║  ████╗░████║██╔════╝████╗░████║██╔════╝       ░░░░░██║  ██╔████╔██║█████╗░░██╔████╔██║█████╗░░       ██╗░░██║  ██║╚██╔╝██║██╔══╝░░██║╚██╔╝██║██╔══╝░░       ╚█████╔╝  ██║░╚═╝░██║███████╗██║░╚═╝░██║███████╗       ░╚════╝░  ╚═╝░░░░░╚═╝╚══════╝╚═╝░░░░░╚═╝╚══════╝         Keybind:             - Semicolon // To trigger chat box       - Enter // To submit your chat       - Click on player chat // To view his translation       - Quote // To hide/show UI             Next Update:             - Ill make it so it auto detects language of chat upon click       - yes thats it       --]]        game:HttpGet(           'https://raw.githubusercontent.com/PivotEngine/cool_scripts/main/Pedro.exe',           true       )   )(); end)
+
+ end)
+
+ 
+
+ Tab3Section:NewButton("Fe Free Emotes Gui", "free emotes", function()
+
+ loadstring(game:HttpGet("https://pastebin.com/raw/eCpipCTH"))()
+
+ end)
+
+ 
+
+ Tab3Section:NewButton("Fe Invisible Tools", "gives you Invisible tools", function()
+
+ loadstring(game:HttpGet(('https://pastefy.ga/VYIAk3o1/raw'),true))()
+
+ end)
+
+ Tab3Section:NewButton("Fe Btools V3", "move your chapter like wall", function()
+
+ --Made by rouxhaver
+
+--Network Library by 4eyes
+
+local Players = game:GetService("Players")
+
+local RunService = game:GetService("RunService")
+
+local LocalPlayer = Players.LocalPlayer
+
+if not getgenv().Network then
+
+	getgenv().Network = {
+
+		BaseParts = {};
+
+		FakeConnections = {};
+
+		Connections = {};
+
+		Output = {
+
+			Enabled = true;
+
+			Prefix = "[NETWORK] ";
+
+			Send = function(Type,Output,BypassOutput)
+
+				if typeof(Type) == "function" and (Type == print or Type == warn or Type == error) and typeof(Output) == "string" and (typeof(BypassOutput) == "nil" or typeof(BypassOutput) == "boolean") then
+
+					if Network["Output"].Enabled == true or BypassOutput == true then
+
+						Type(Network["Output"].Prefix..Output);
+
+					end;
+
+				elseif Network["Output"].Enabled == true then
+
+					error(Network["Output"].Prefix.."Output Send Error : Invalid syntax.");
+
+				end;
+
+			end;
+
+		};
+
+		CharacterRelative = false;
+
+	}
+
+	Network["Output"].Send(print,": Loading.")
+
+	Network["Velocity"] = Vector3.new(14.46262424,14.46262424,14.46262424); --exactly 25.1 magnitude
+
+	Network["RetainPart"] = function(Part,ReturnFakePart) --function for retaining ownership of unanchored parts
+
+		assert(typeof(Part) == "Instance" and Part:IsA("BasePart") and Part:IsDescendantOf(workspace),Network["Output"].Prefix.."RetainPart Error : Invalid syntax: Arg1 (Part) must be a BasePart which is a descendant of workspace.")
+
+		assert(typeof(ReturnFakePart) == "boolean" or typeof(ReturnFakePart) == "nil",Network["Output"].Prefix.."RetainPart Error : Invalid syntax: Arg2 (ReturnFakePart) must be a boolean or nil.")
+
+		if not table.find(Network["BaseParts"],Part) then
+
+			if Network.CharacterRelative == true then
+
+				local Character = LocalPlayer.Character
+
+				if Character and Character.PrimaryPart then
+
+					local Distance = (Character.PrimaryPart.Position-Part.Position).Magnitude
+
+					if Distance > 1000 then
+
+						Network["Output"].Send(warn,"RetainPart Warning : PartOwnership not applied to BasePart "..Part:GetFullName()..", as it is more than "..gethiddenproperty(LocalPlayer,"MaximumSimulationRadius").." studs away.")
+
+						return false
+
+					end
+
+				else
+
+					Network["Output"].Send(warn,"RetainPart Warning : PartOwnership not applied to BasePart "..Part:GetFullName()..", as the LocalPlayer Character's PrimaryPart does not exist.")
+
+					return false
+
+				end
+
+			end
+
+			table.insert(Network["BaseParts"],Part)
+
+			Part.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+
+			Network["Output"].Send(print,"PartOwnership Output : PartOwnership applied to BasePart "..Part:GetFullName()..".")
+
+			if ReturnFakePart == true then
+
+				return FakePart
+
+			end
+
+		else
+
+			Network["Output"].Send(warn,"RetainPart Warning : PartOwnership not applied to BasePart "..Part:GetFullName()..", as it already active.")
+
+			return false
+
+		end
+
+	end
+
+	Network["RemovePart"] = function(Part) --function for removing ownership of unanchored part
+
+		assert(typeof(Part) == "Instance" and Part:IsA("BasePart"),Network["Output"].Prefix.."RemovePart Error : Invalid syntax: Arg1 (Part) must be a BasePart.")
+
+		local Index = table.find(Network["BaseParts"],Part)
+
+		if Index then
+
+			table.remove(Network["BaseParts"],Index)
+
+			Network["Output"].Send(print,"RemovePart Output: PartOwnership removed from BasePart "..Part:GetFullName()..".")
+
+		else
+
+			Network["Output"].Send(warn,"RemovePart Warning : BasePart "..Part:GetFullName().." not found in BaseParts table.")
+
+		end
+
+	end
+
+	Network["SuperStepper"] = Instance.new("BindableEvent") --make super fast event to connect to
+
+	for _,Event in pairs({RunService.Stepped,RunService.Heartbeat}) do
+
+		Event:Connect(function()
+
+			return Network["SuperStepper"]:Fire(Network["SuperStepper"],tick())
+
+		end)
+
+	end
+
+	Network["PartOwnership"] = {};
+
+	Network["PartOwnership"]["PreMethodSettings"] = {};
+
+	Network["PartOwnership"]["Enabled"] = false;
+
+	Network["PartOwnership"]["Enable"] = coroutine.create(function() --creating a thread for network stuff
+
+		if Network["PartOwnership"]["Enabled"] == false then
+
+			Network["PartOwnership"]["Enabled"] = true --do cool network stuff before doing more cool network stuff
+
+			Network["PartOwnership"]["PreMethodSettings"].ReplicationFocus = LocalPlayer.ReplicationFocus
+
+			LocalPlayer.ReplicationFocus = workspace
+
+			Network["PartOwnership"]["PreMethodSettings"].SimulationRadius = gethiddenproperty(LocalPlayer,"SimulationRadius")
+
+			Network["PartOwnership"]["Connection"] = Network["SuperStepper"].Event:Connect(function() --super fast asynchronous loop
+
+				sethiddenproperty(LocalPlayer,"SimulationRadius",1/0)
+
+				for _,Part in pairs(Network["BaseParts"]) do --loop through parts and do network stuff
+
+					coroutine.wrap(function()
+
+						if Part:IsDescendantOf(workspace) then
+
+							if Network.CharacterRelative == true then
+
+								local Character = LocalPlayer.Character;
+
+								if Character and Character.PrimaryPart then
+
+									local Distance = (Character.PrimaryPart.Position - Part.Position).Magnitude
+
+									if Distance > 1000 then
+
+										Network["Output"].Send(warn,"PartOwnership Warning : PartOwnership not applied to BasePart "..Part:GetFullName()..", as it is more than "..gethiddenproperty(LocalPlayer,"MaximumSimulationRadius").." studs away.")
+
+										Lost = true;
+
+										Network["RemovePart"](Part)
+
+									end
+
+								else
+
+									Network["Output"].Send(warn,"PartOwnership Warning : PartOwnership not applied to BasePart "..Part:GetFullName()..", as the LocalPlayer Character's PrimaryPart does not exist.")
+
+								end
+
+							end
+
+							Part.Velocity = Network["Velocity"]+Vector3.new(0,math.cos(tick()*10)/100,0) --keep network by sending physics packets of 30 magnitude + an everchanging addition in the y level so roblox doesnt get triggered and fuck your ownership
+
+						else
+
+							Network["RemovePart"](Part)
+
+						end
+
+					end)()
+
+				end
+
+			end)
+
+			Network["Output"].Send(print,"PartOwnership Output : PartOwnership enabled.")
+
+		else
+
+			Network["Output"].Send(warn,"PartOwnership Output : PartOwnership already enabled.")
+
+		end
+
+	end)
+
+	Network["PartOwnership"]["Disable"] = coroutine.create(function()
+
+		if Network["PartOwnership"]["Connection"] then
+
+			Network["PartOwnership"]["Connection"]:Disconnect()
+
+			LocalPlayer.ReplicationFocus = Network["PartOwnership"]["PreMethodSettings"].ReplicationFocus
+
+			sethiddenproperty(LocalPlayer,"SimulationRadius",Network["PartOwnership"]["PreMethodSettings"].SimulationRadius)
+
+			Network["PartOwnership"]["PreMethodSettings"] = {}
+
+			for _,Part in pairs(Network["BaseParts"]) do
+
+				Network["RemovePart"](Part)
+
+			end
+
+			Network["PartOwnership"]["Enabled"] = false
+
+			Network["Output"].Send(print,"PartOwnership Output : PartOwnership disabled.")
+
+		else
+
+			Network["Output"].Send(warn,"PartOwnership Output : PartOwnership already disabled.")
+
+		end
+
+	end)
+
+	Network["Output"].Send(print,": Loaded.")
+
+end
+
+coroutine.resume(Network["PartOwnership"]["Enable"])
+
+player = game:GetService("Players").LocalPlayer
+
+Gui = player.PlayerGui
+
+Backpack = player.Backpack
+
+Mouse = player:GetMouse()
+
+Parts_Folder = Instance.new("Folder",workspace)
+
+for i, Hat in pairs(player.Character:GetChildren()) do
+
+	if Hat:IsA("Accessory") then
+
+		local Part = Instance.new("Part",Parts_Folder)
+
+		Part.Name = Hat.Name
+
+		Part.Anchored = true
+
+		Part.Size = Hat.Handle.Size
+
+		Part.Position = player.Character.Head.Position + Vector3.new(math.random(-5,5),math.random(-1,1),math.random(-5,5))
+
+		Part:SetAttribute("Moveable",true)
+
+		Part.Material = Enum.Material.SmoothPlastic
+
+		Part.CanCollide = false
+
+        Part.Color = Color3.new(1,0,0)
+
+	end
+
+end
+
+Move_Tool = Instance.new("Tool",Backpack)
+
+Rotate_Tool = Instance.new("Tool",Backpack)
+
+MHandle = Instance.new("Part",Move_Tool)
+
+RHandle = Instance.new("Part",Rotate_Tool)
+
+Mgrabs = Instance.new("Handles",Gui)
+
+Rgrabs = Instance.new("ArcHandles",Gui)
+
+Outline = Instance.new("Highlight")
+
+Move_Tool.Name = "Move"
+
+Move_Tool.CanBeDropped = false
+
+Rotate_Tool.Name = "Rotate"
+
+Rotate_Tool.CanBeDropped = false
+
+MHandle.Name = "Handle"
+
+MHandle.Transparency = 1
+
+RHandle.Name = "Handle"
+
+RHandle.Transparency = 1
+
+Mgrabs.Visible = false
+
+Mgrabs.Color3 = Color3.fromRGB(248, 236, 0)
+
+Mgrabs.Style = "Movement"
+
+Rgrabs.Visible = false
+
+Outline.FillTransparency = 1
+
+Outline.OutlineTransparency = 0
+
+Active_Part = nil
+
+Move_Tool.Equipped:Connect(function()
+
+	if Active_Part ~= nil then
+
+		Mgrabs.Visible = true
+
+		Mgrabs.Adornee = Active_Part
+
+	end
+
+end)
+
+Move_Tool.Unequipped:Connect(function()
+
+	Mgrabs.Visible = false
+
+	Mgrabs.Adornee = nil
+
+end)
+
+Move_Tool.Activated:Connect(function()
+
+	if Mouse.Target:GetAttribute("Moveable") then
+
+		Active_Part = Mouse.Target
+
+		Mgrabs.Visible = true
+
+		Mgrabs.Adornee = Active_Part
+
+		Outline.Parent = Active_Part
+
+	end
+
+end)
+
+Rotate_Tool.Equipped:Connect(function()
+
+	if Active_Part ~= nil then
+
+		Rgrabs.Visible = true
+
+		Rgrabs.Adornee = Active_Part
+
+	end
+
+end)
+
+Rotate_Tool.Unequipped:Connect(function()
+
+	Rgrabs.Visible = false
+
+	Rgrabs.Adornee = nil
+
+end)
+
+Rotate_Tool.Activated:Connect(function()
+
+	if Mouse.Target:GetAttribute("Moveable") then
+
+		Active_Part = Mouse.Target
+
+		Rgrabs.Visible = true
+
+		Rgrabs.Adornee = Active_Part
+
+		Outline.Parent = Active_Part
+
+	end
+
+end)
+
+MOGCFrame = CFrame.new()
+
+Mgrabs.MouseButton1Down:Connect(function()
+
+	MOGCFrame = Active_Part.CFrame
+
+end)
+
+Mgrabs.MouseDrag:Connect(function(knob, pos)
+
+	if knob == Enum.NormalId.Front then
+
+		Active_Part.CFrame = MOGCFrame + MOGCFrame.LookVector * pos
+
+	end
+
+	if knob == Enum.NormalId.Back then
+
+		Active_Part.CFrame = MOGCFrame + MOGCFrame.LookVector * -pos
+
+	end
+
+	if knob == Enum.NormalId.Top then
+
+		Active_Part.CFrame = MOGCFrame + MOGCFrame.UpVector * pos
+
+	end
+
+	if knob == Enum.NormalId.Bottom then
+
+		Active_Part.CFrame = MOGCFrame + MOGCFrame.UpVector * -pos
+
+	end
+
+	if knob == Enum.NormalId.Left then
+
+		Active_Part.CFrame = MOGCFrame + MOGCFrame.RightVector * -pos
+
+	end
+
+	if knob == Enum.NormalId.Right then
+
+		Active_Part.CFrame = MOGCFrame + MOGCFrame.RightVector * pos
+
+	end
+
+end)
+
+ROGCFrame = CFrame.new()
+
+Rgrabs.MouseButton1Down:Connect(function()
+
+	ROGCFrame = Active_Part.CFrame
+
+end)
+
+Rgrabs.MouseDrag:Connect(function(knob, angle)
+
+	if knob == Enum.Axis.Y then
+
+		Active_Part.CFrame = ROGCFrame * CFrame.Angles(0,angle,0)
+
+	end
+
+	if knob == Enum.Axis.X then
+
+		Active_Part.CFrame = ROGCFrame * CFrame.Angles(angle,0,0)
+
+	end
+
+	if knob == Enum.Axis.Z then
+
+		Active_Part.CFrame = ROGCFrame * CFrame.Angles(0,0,angle)
+
+	end
+
+end)
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+
+	Title = "FE BTools V3 Loaded",
+
+	Text = "Made by rouxhaver",
+
+	Icon = "rbxassetid://12561999923"
+
+})
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+
+	Title = "Network Credit:",
+
+	Text = "thanks to 4eyes for network stuff",
+
+	Icon = "rbxassetid://12562053596"
+
+})
+
+HRP = player.Character.HumanoidRootPart
+
+for i, Part in pairs(Parts_Folder:GetChildren()) do
+
+	local Hat = player.Character[Part.Name].Handle
+
+	Hat.AccessoryWeld:Destroy()
+
+    Network.RetainPart(Hat)
+
+	local vbreak = false
+
+	coroutine.wrap(function()
+
+		while task.wait() do
+
+			if vbreak == true then break end
+
+			Hat.CFrame = Part.CFrame
+
+		end
+
+	end)()
+
+	Hat:FindFirstChildWhichIsA("SpecialMesh"):Destroy()
+
+end
+
+player.Character.Humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+
+	Parts_Folder:Destroy()
+
+end)
+
+end)
+
+ Tab3Section:NewButton("Fe Oribit Player gui", "oribit players", function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Orbit%20GUI"))()
+
+ end)
+
+ 
+
+ Tab3Section:NewButton("Fe pose", "Wear hats poses", function()
+
+loadstring(game:HttpGet(('https://pastefy.ga/KdzVDQFp/raw'),true))()
+
+--wear any hats are hat poses
+
+end)
+
+ 
+
+ local Tab4 = Window:NewTab("Gui")
+
+ local Tab4Section = Tab4:NewSection("Gui")
+
+ Tab4Section:NewButton("RTX GUI V4.3", "Rtx", function()
+
+ loadstring(game:HttpGet(('https://pastefy.ga/xXkUxA0P/raw'),true))()
+
+ end)
+
+ 
+
+ Tab4Section:NewButton("Searcher scripts Gui", "Search scripts", function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/ScriptSearcher"))()
+
+ end)
+
+ 
+
+ Tab4Section:NewButton("Fling Gui r6 and r15", "Fling players", function()
+
+ loadstring(game:HttpGet("https://pastebin.com/raw/Ud1cg5pR"))()
+
+ end)
+
+ 
+
+  Tab4Section:NewButton("Kidnap Gui", "Kidnap players", function()
+
+  
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Kidnap%20again"))()
+
+end)
+
+ local Tab5 = Window:NewTab("Fe Scripts Fling")
+
+ local Tab5Section = Tab5:NewSection("Fe Scripts Fling")
+
+ Tab5Section:NewButton("Fe Animation man need hats", "Fling", function()
+
+  loadstring(game:HttpGet(('https://pastefy.ga/YRnMdd5V/raw'),true))()   --[[  hat Required    https://www.roblox.com/catalog/48474313/Red-Roblox-Cap     https://www.roblox.com/catalog/62724852/Chestnut-Bun       https://www.roblox.com/catalog/48474294/ROBLOX-Girl-  Hair   https://www.roblox.com/catalog/63690008/Pal-Hair      ]]
+
+  end)
+
+  
+
+  Tab5Section:NewButton("Fe Fling with no collision", "Fling Players", function()
+
+  loadstring(game:HttpGet('https://gist.githubusercontent.com/1BlueCat/544f7efbe88235666b5b7add65b7344d/raw/f20804bb85542dcc3bc938982e1f05b7ff05cded/FE%2520Hat%2520Fling'))()
+
+  end)
+
+  
+
+  Tab5Section:NewButton("Fe Sakura Blade need hats", "Fling", function()
+
+  loadstring(game:HttpGet('https://pastebin.com/raw/zsvqh0VE'))() --Big Sword ;D
+
+--[[HATS
+
+--https://web.roblox.com/catalog/63690008/Pal-Hair
+
+--https://web.roblox.com/catalog/62234425/Brown-Hair
+
+--https://web.roblox.com/catalog/48474313/Red-Roblox-Cap
+
+--https://web.roblox.com/catalog/62724852/Chestnut-Bun
+
+--https://web.roblox.com/catalog/451220849/Lavender-Updo
+
+--https://web.roblox.com/catalog/48474294/ROBLOX-Girl-Hair --parts of body 
+
+--https://web.roblox.com/catalog/10775031176/The-Pogo
+
+--[The-Pogo hat tutorial --> https://youtu.be/nUppgeXkTNY]-- --Sword Part 1
+
+--https://web.roblox.com/catalog/12103236257/AO-Surfboard
+
+--[Ao-Surfboard hat tutorial --> https://youtu.be/33zH12Pxd3Q ]-- --Sword Part 2]]
+
+-----------
+
+--credits--
+
+-----------
+
+--OrIginal CreaTOR: I Don't kNOw
+
+--REANIM: myworld#4430 
+
+--hat aligned: keyeR
+
+end)
+
+Tab5Section:NewButton("Fe punish tool", "Fling Players", function()
+
+loadstring(game:HttpGet(('https://pastefy.ga/GvnHVjT5/raw'),true))()
+
+end)
+
+Tab5Section:NewButton("Fe surfboard need hats", "Fling", function()
+
+loadstring(game:HttpGet('https://gist.githubusercontent.com/MoonDevRed/328253b738041e0503dd581ac108b705/raw/1d593587f8e2a895275e37530eb499920b2f2902/Fe%2520Surfboard%2520By%2520Red%2520Moon'))()
+
+ 
+
+--Credits To RedMoon
+
+--Hats:
+
+--https://www.roblox.com/catalog/12103236257/AO-Surfboard
+
+--https://www.roblox.com/catalog/48474294/ROBLOX-Girl-Hair
+
+--https://www.roblox.com/catalog/48474313/Red-Roblox-Cap
+
+--https://www.roblox.com/catalog/451220849/Lavender-Updo
+
+--https://www.roblox.com/catalog/62724852/Chestnut-Bun
+
+--https://www.roblox.com/catalog/63690008/Pal-Hair
+
+--https://www.roblox.com/catalog/62234425/Brown-Hair
+
+end)
+
+local Tab6 = Window:NewTab("Admin")
+
+local Tab6Section = Tab6:NewSection("Admin")
+
+Tab6Section:NewButton("Infinite Yield", "Admin commands", function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+end)
+
+Tab6Section:NewButton("ANARKY's Admin V3", "Admin commands", function()
+
+loadstring(game:HttpGet(('https://pastefy.ga/Wg1ZZG0T/raw'),true))()
+
+end)
+
+Tab6Section:NewButton("Nameless Admin", "Admin commands", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))();
+
+end)
+
+Tab6Section:NewButton("IV Admin", "Admin commands", function()
+
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\112\97\115\116\101\102\121\46\103\97\47\102\51\114\82\67\98\71\122\47\114\97\119\39\41\44\116\114\117\101\41\41\40\41\10")()
+
+end)
+
+Tab6Section:NewButton("Admin script", "Admin commands", function()
+
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\112\97\115\116\101\102\121\46\103\97\47\102\71\89\97\52\105\55\116\47\114\97\119\39\41\44\116\114\117\101\41\41\40\41\10")()
+
+end)
+
+local Tab7 = Window:NewTab("Games")
+
+local Tab7Section = Tab7:NewSection("Games")
+
+Tab7Section:NewButton("Brookhaven", "has scripts", function()
+
+loadstring(game:HttpGet('https://icehub.cf/IceHubLoader'))()
+
+end)
+
+Tab7Section:NewButton("Fencing", "has scripts", function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/hwNz1yVW"))()
+
+end)
+
+local Tab7Section = Tab7:NewSection("more Games soon")
+
+local Tab8 = Window:NewTab("Credits")
+
+local Tab8Section = Tab8:NewSection("made by Bido Skins")
