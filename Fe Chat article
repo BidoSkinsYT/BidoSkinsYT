@@ -1,0 +1,111 @@
+--//Initialization\\--
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage");
+
+local HttpService = game:GetService("HttpService");
+
+local RunService = game:GetService("RunService");
+
+local Players = game:GetService("Players");
+
+local LPlayer = Players.LocalPlayer;
+
+local ChatEvent = ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest;
+
+local MaxQueueSize = 2;
+
+local Queue = {};--For people with slow internet (like me), the message can take 5 seconds to load
+
+--before being sent, which is really anti-climactic, so I store them in a queue ;w;
+
+--//Functions\\--
+
+local function ExtractMainText(ArticleTitle: string)--Gets the main text sentence of the Wikipedia Article.
+
+    local APIURL = "https://en.wikipedia.org/w/api.php?action=query&format=json&titles=ARTICLE_TITLE&prop=extracts&exintro&explaintext";
+
+    APIURL = APIURL:gsub("ARTICLE_TITLE", ArticleTitle:gsub(" ", "_"));--Puts the title in the link.
+
+   
+
+    local Data = game:HttpGet(APIURL);
+
+    Data = HttpService:JSONDecode(Data);
+
+   
+
+    local ArticleID, Data = next(Data["query"]["pages"]);
+
+    return Data["extract"];--Gets the raw text of the article.
+
+end;
+
+local function GetRandomArticle()
+
+    local Content = game:HttpGet("https://en.wikipedia.org/wiki/Special:Random");
+
+    local Title = Content:sub(Content:find("<title>") + #("<title>"), Content:find(" - Wikipedia") - 2);
+
+    return Title;
+
+end;
+
+local function AddToQueue()--Adds one article to the queue (preloads them for people with slow internet)
+
+    local Title = GetRandomArticle();
+
+    warn(Title);
+
+    local Text = ExtractMainText(Title);
+
+    if (#Text > 300) then
+
+        Text = Text:sub(1, Text:find("%."));
+
+    end;
+
+    Queue[#Queue+1] = Text;
+
+end;
+
+local function ChatArticle()
+
+    if (#Queue) <= 0 then return false; end;
+
+    local Article = table.remove(Queue, 1);
+
+    ChatEvent:FireServer(Article, "All");
+
+    return true;
+
+end;
+
+local function Connection(Character: Model)
+
+    local Humanoid = Character:FindFirstChildOfClass("Humanoid");
+
+    while (not Humanoid) do RunService.Heartbeat:Wait(); Humanoid = Character:FindFirstChildOfClass("Humanoid"); end;
+
+    Humanoid.Died:Wait();
+
+    ChatArticle();
+
+    repeat
+
+        pcall(AddToQueue);
+
+    until (#Queue >= MaxQueueSize);
+
+end;
+
+task.spawn(Connection, LPlayer.Character);
+
+LPlayer.CharacterAdded:Connect(Connection);
+
+for _ = 1, MaxQueueSize do
+
+    AddToQueue();
+
+end;
+
+warn("Loaded ", MaxQueueSize, " Articles");
