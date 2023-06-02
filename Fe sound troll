@@ -1,0 +1,51 @@
+-- Works in any game where RespectFilteringEnabled option is false
+
+-- !! If it doesn't say success, try it on a different game, usually an older game will work. !!
+
+--[[ 
+
+ A few games i've tested it on:
+
+https://www.roblox.com/games/12109643/Fencing
+
+https://www.roblox.com/games/189707/Natural-Disaster-Survival
+
+https://www.roblox.com/games/192800/Work-at-a-Pizza-Place
+
+https://www.roblox.com/games/6441847031/CHAOS
+
+https://www.roblox.com/games/155615604/Prison-Life
+
+Works on a lot more games than this, you just need to find them! ~ trial and error :)
+
+--]]
+
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua", true))()
+
+local SoundService = game:GetService("SoundService")
+
+if SoundService.RespectFilteringEnabled == false then
+
+	Notification.new("success", "Success", "Everyone can hear the sounds in this game!")	Notification.new("message", "YouTube : darkModz", "YouTube - darkmodz")
+
+else
+
+	Notification.new("warning", "Warning", "Unfortunately no one else can hear it in this game, try a different one.\nMaybe an older game will work.")
+
+end
+
+while wait() do
+
+	for _, sound in next, workspace:GetDescendants() do
+
+		if sound:IsA("Sound") then
+
+			sound.Volume = 10
+
+			sound:Play()
+
+		end
+
+	end
+
+end
