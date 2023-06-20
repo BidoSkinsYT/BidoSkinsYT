@@ -1,0 +1,81 @@
+-- Khởi tạo ESP object
+
+local Players = game:GetService("Players")
+
+local LocalPlayer = Players.LocalPlayer
+
+local function createBillboardGui(part)
+
+	local BillboardGui = Instance.new("BillboardGui")	BillboardGui.Name = "ESP"
+
+	BillboardGui.AlwaysOnTop = true
+
+	BillboardGui.Size = UDim2.new(0, 100, 0, 40)
+
+	BillboardGui.StudsOffset = Vector3.new(0, 3, 0)
+
+	local TextLabel = Instance.new("TextLabel")
+
+	TextLabel.Name = "Name"
+
+	TextLabel.BackgroundTransparency = 1
+
+	TextLabel.Size = UDim2.new(1, 0, 1, 0)
+
+	TextLabel.Text = part.Parent.Name
+
+	TextLabel.TextColor3 = Color3.new(1, 1, 1)
+
+	TextLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
+
+	TextLabel.TextStrokeTransparency = 0
+
+	TextLabel.Font = Enum.Font.SourceSansBold
+
+	TextLabel.TextScaled = true
+
+	TextLabel.Parent = BillboardGui
+
+	BillboardGui.Parent = part
+
+end
+
+-- Tạo ESP cho toàn bộ người chơi
+
+for _, player in ipairs(Players:GetPlayers()) do
+
+	if player ~= LocalPlayer then
+
+		local character = player.Character
+
+		if character then
+
+			for _, part in ipairs(character:GetDescendants()) do
+
+				if part:IsA("BasePart") then
+
+					createBillboardGui(part)
+
+				end
+
+			end
+
+		end
+
+		player.CharacterAdded:Connect(function(character)
+
+			for _, part in ipairs(character:GetDescendants()) do
+
+				if part:IsA("BasePart") then
+
+					createBillboardGui(part)
+
+				end
+
+			end
+
+		end)
+
+	end
+
+end
