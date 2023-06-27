@@ -1,0 +1,748 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local Window = Library.CreateLib("Bido Skins V1.6", "BloodTheme")
+
+-- Tabs
+
+local Tab1 = Window:NewTab("Main")
+local Tab1Section = Tab1:NewSection("Main")
+
+-- Buttons/Windows/Idk
+
+Tab1Section:NewButton("Universal Fly", "make you fly", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/gaz0U0XX"))();
+    end)
+    
+    Tab1Section:NewButton("Universal Hitbox", "Kill ppl easy", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
+    end)
+    
+    Tab1Section:NewButton("Universal Fly another", "make you fly", function()
+  loadstring(game:HttpGet("https://pastebin.com/raw/YvKv4AuY"))()
+  end)
+  
+Tab1Section:NewButton("Fly Gui V3", "make you fly", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Fly%20Gui%20V3"))()
+end)
+
+Tab1Section:NewButton("Fly Gui V3 MODIFIED", "make you fly", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/TeNifRrX"))()
+end)
+
+Tab1Section:NewButton("Hitbox", "kill ppl easy", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Hitbox%20script"))()
+end)
+Tab1Section:NewButton("Anti-Fling", "Cant get flinged again", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Anti%20fling"))()
+end)
+
+Tab1Section:NewButton("another Anti-Fling", "Cant get flinged again", function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/GxdesRQx'),true))()
+end)
+
+Tab1Section:NewButton("Anti lag chat", "no any lag chat again", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLag.lua"))()
+end)
+
+Tab1Section:NewButton("Anti lag", "no any lag again", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/zJztwUg1"))()
+end)
+
+Tab1Section:NewButton("Rejoin button when disconnected", "join your server if disconnected", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Rejoin%20button"))()
+end)
+
+Tab1Section:NewButton("Chat Rainbow", "chat rainbow", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Rainbow%20chat"))()
+end)
+
+Tab1Section:NewButton("Walk speed/jumppower", "speed your chapter/jump high", function()
+loadstring("\45\45\32\71\117\105\32\116\111\32\76\117\97\10\45\45\32\86\101\114\115\105\111\110\58\32\51\46\50\10\10\45\45\32\73\110\115\116\97\110\99\101\115\58\10\10\108\111\99\97\108\32\83\99\114\101\101\110\71\117\105\32\61\32\73\110\115\116\97\110\99\101\46\110\101\119\40\34\83\99\114\101\101\110\71\117\105\34\41\10\108\111\99\97\108\32\77\97\105\110\32\61\32\73\110\115\116\97\110\99\101\46\110\101\119\40\34\70\114\97\109\101\34\41\10\108\111\99\97\108\32\84\101\120\116\76\97\98\101\108\32\61\32\73\110\115\116\97\110\99\101\46\110\101\119\40\34\84\101\120\116\76\97\98\101\108\34\41\10\108\111\99\97\108\32\85\73\67\111\114\110\101\114\32\61\32\73\110\115\116\97\110\99\101\46\110\101\119\40\34\85\73\67\111\114\110\101\114\34\41\10\108\111\99\97\108\32\85\73\67\111\114\110\101\114\95\50\32\61\32\73\110\115\116\97\110\99\101\46\110\101\119\40\34\85\73\67\111\114\110\101\114\34\41\10\108\111\99\97\108\32\116\121\112\101\119\115\32\61\32\73\110\115\116\97\110\99\101\46\110\101\119\40\34\84\101\120\116\66\111\120\34\41\10\108\111\99\97\108\32\115\101\116\119\115\32\61\32\73\110\115\116\97\110\99\101\46\110\101\119\40\34\84\101\120\116\66\117\116\116\111\110\34\41\10\108\111\99\97\108\32\116\121\112\101\106\112\32\61\32\73\110\115\116\97\110\99\101\46\110\101\119\40\34\84\101\120\116\66\111\120\34\41\10\108\111\99\97\108\32\115\101\116\106\112\32\61\32\73\110\115\116\97\110\99\101\46\110\101\119\40\34\84\101\120\116\66\117\116\116\111\110\34\41\10\108\111\99\97\108\32\67\108\111\115\101\32\61\32\73\110\115\116\97\110\99\101\46\110\101\119\40\34\84\101\120\116\66\117\116\116\111\110\34\41\10\108\111\99\97\108\32\85\73\67\111\114\110\101\114\95\51\32\61\32\73\110\115\116\97\110\99\101\46\110\101\119\40\34\85\73\67\111\114\110\101\114\34\41\10\108\111\99\97\108\32\79\112\101\110\32\61\32\73\110\115\116\97\110\99\101\46\110\101\119\40\34\84\101\120\116\66\117\116\116\111\110\34\41\10\108\111\99\97\108\32\85\73\67\111\114\110\101\114\95\52\32\61\32\73\110\115\116\97\110\99\101\46\110\101\119\40\34\85\73\67\111\114\110\101\114\34\41\10\10\45\45\80\114\111\112\101\114\116\105\101\115\58\10\10\83\99\114\101\101\110\71\117\105\46\80\97\114\101\110\116\32\61\32\103\97\109\101\46\67\111\114\101\71\117\105\10\10\77\97\105\110\46\78\97\109\101\32\61\32\34\77\97\105\110\34\10\77\97\105\110\46\80\97\114\101\110\116\32\61\32\83\99\114\101\101\110\71\117\105\10\77\97\105\110\46\66\97\99\107\103\114\111\117\110\100\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\53\55\44\32\53\55\44\32\53\55\41\10\77\97\105\110\46\80\111\115\105\116\105\111\110\32\61\32\85\68\105\109\50\46\110\101\119\40\48\46\48\53\51\50\48\56\49\51\56\56\44\32\48\44\32\48\46\48\54\52\48\54\54\56\52\57\54\44\32\48\41\10\77\97\105\110\46\83\105\122\101\32\61\32\85\68\105\109\50\46\110\101\119\40\48\44\32\49\54\51\44\32\48\44\32\50\48\53\41\10\77\97\105\110\46\65\99\116\105\118\101\32\61\32\116\114\117\101\10\77\97\105\110\46\68\114\97\103\103\97\98\108\101\32\61\32\116\114\117\101\10\10\84\101\120\116\76\97\98\101\108\46\80\97\114\101\110\116\32\61\32\77\97\105\110\10\84\101\120\116\76\97\98\101\108\46\66\97\99\107\103\114\111\117\110\100\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\57\51\44\32\57\51\44\32\57\51\41\10\84\101\120\116\76\97\98\101\108\46\83\105\122\101\32\61\32\85\68\105\109\50\46\110\101\119\40\48\44\32\49\54\51\44\32\48\44\32\50\52\41\10\84\101\120\116\76\97\98\101\108\46\70\111\110\116\32\61\32\69\110\117\109\46\70\111\110\116\46\83\111\117\114\99\101\83\97\110\115\10\84\101\120\116\76\97\98\101\108\46\84\101\120\116\32\61\32\34\87\97\108\107\83\112\101\101\100\32\97\110\100\32\74\117\109\112\32\112\111\119\101\114\34\10\84\101\120\116\76\97\98\101\108\46\84\101\120\116\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\48\44\32\48\44\32\48\41\10\84\101\120\116\76\97\98\101\108\46\84\101\120\116\83\105\122\101\32\61\32\49\52\46\48\48\48\10\10\85\73\67\111\114\110\101\114\46\80\97\114\101\110\116\32\61\32\84\101\120\116\76\97\98\101\108\10\10\85\73\67\111\114\110\101\114\95\50\46\80\97\114\101\110\116\32\61\32\77\97\105\110\10\10\116\121\112\101\119\115\46\78\97\109\101\32\61\32\34\116\121\112\101\119\115\34\10\116\121\112\101\119\115\46\80\97\114\101\110\116\32\61\32\77\97\105\110\10\116\121\112\101\119\115\46\66\97\99\107\103\114\111\117\110\100\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\50\53\53\44\32\50\53\53\44\32\50\53\53\41\10\116\121\112\101\119\115\46\80\111\115\105\116\105\111\110\32\61\32\85\68\105\109\50\46\110\101\119\40\48\46\48\54\55\52\56\52\54\54\49\57\44\32\48\44\32\48\46\49\53\49\50\49\57\53\49\55\44\32\48\41\10\116\121\112\101\119\115\46\83\105\122\101\32\61\32\85\68\105\109\50\46\110\101\119\40\48\44\32\49\52\50\44\32\48\44\32\50\55\41\10\116\121\112\101\119\115\46\70\111\110\116\32\61\32\69\110\117\109\46\70\111\110\116\46\83\111\117\114\99\101\83\97\110\115\10\116\121\112\101\119\115\46\84\101\120\116\32\61\32\34\84\121\112\101\32\87\97\108\107\32\83\112\101\101\100\34\10\116\121\112\101\119\115\46\84\101\120\116\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\48\44\32\48\44\32\48\41\10\116\121\112\101\119\115\46\84\101\120\116\83\105\122\101\32\61\32\49\52\46\48\48\48\10\10\115\101\116\119\115\46\78\97\109\101\32\61\32\34\115\101\116\119\115\34\10\115\101\116\119\115\46\80\97\114\101\110\116\32\61\32\77\97\105\110\10\115\101\116\119\115\46\66\97\99\107\103\114\111\117\110\100\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\57\51\44\32\57\51\44\32\57\51\41\10\115\101\116\119\115\46\80\111\115\105\116\105\111\110\32\61\32\85\68\105\109\50\46\110\101\119\40\48\46\48\54\55\52\56\52\54\54\49\57\44\32\48\44\32\48\46\51\49\55\48\55\51\49\57\54\44\32\48\41\10\115\101\116\119\115\46\83\105\122\101\32\61\32\85\68\105\109\50\46\110\101\119\40\48\44\32\49\52\50\44\32\48\44\32\50\53\41\10\115\101\116\119\115\46\70\111\110\116\32\61\32\69\110\117\109\46\70\111\110\116\46\83\111\117\114\99\101\83\97\110\115\10\115\101\116\119\115\46\84\101\120\116\32\61\32\34\83\101\116\32\87\97\108\107\83\112\101\101\100\34\10\115\101\116\119\115\46\84\101\120\116\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\48\44\32\48\44\32\48\41\10\115\101\116\119\115\46\84\101\120\116\83\105\122\101\32\61\32\49\52\46\48\48\48\10\115\101\116\119\115\46\77\111\117\115\101\66\117\116\116\111\110\49\67\108\105\99\107\58\67\111\110\110\101\99\116\40\102\117\110\99\116\105\111\110\40\41\10\9\103\97\109\101\46\80\108\97\121\101\114\115\46\76\111\99\97\108\80\108\97\121\101\114\46\67\104\97\114\97\99\116\101\114\46\72\117\109\97\110\111\105\100\46\87\97\108\107\83\112\101\101\100\32\61\32\116\121\112\101\119\115\46\84\101\120\116\10\101\110\100\41\10\116\121\112\101\106\112\46\78\97\109\101\32\61\32\34\116\121\112\101\106\112\34\10\116\121\112\101\106\112\46\80\97\114\101\110\116\32\61\32\77\97\105\110\10\116\121\112\101\106\112\46\66\97\99\107\103\114\111\117\110\100\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\50\53\53\44\32\50\53\53\44\32\50\53\53\41\10\116\121\112\101\106\112\46\80\111\115\105\116\105\111\110\32\61\32\85\68\105\109\50\46\110\101\119\40\48\46\48\54\49\51\52\57\54\57\51\55\44\32\48\44\32\48\46\53\51\49\55\48\55\50\56\55\44\32\48\41\10\116\121\112\101\106\112\46\83\105\122\101\32\61\32\85\68\105\109\50\46\110\101\119\40\48\44\32\49\52\50\44\32\48\44\32\50\55\41\10\116\121\112\101\106\112\46\70\111\110\116\32\61\32\69\110\117\109\46\70\111\110\116\46\83\111\117\114\99\101\83\97\110\115\10\116\121\112\101\106\112\46\84\101\120\116\32\61\32\34\84\121\112\101\32\74\117\109\112\32\80\111\119\101\114\34\10\116\121\112\101\106\112\46\84\101\120\116\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\48\44\32\48\44\32\48\41\10\116\121\112\101\106\112\46\84\101\120\116\83\105\122\101\32\61\32\49\52\46\48\48\48\10\10\115\101\116\106\112\46\78\97\109\101\32\61\32\34\115\101\116\106\112\34\10\115\101\116\106\112\46\80\97\114\101\110\116\32\61\32\77\97\105\110\10\115\101\116\106\112\46\66\97\99\107\103\114\111\117\110\100\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\57\51\44\32\57\51\44\32\57\51\41\10\115\101\116\106\112\46\80\111\115\105\116\105\111\110\32\61\32\85\68\105\109\50\46\110\101\119\40\48\46\48\54\55\52\56\52\54\54\49\57\44\32\48\44\32\48\46\54\57\55\53\54\49\48\50\54\44\32\48\41\10\115\101\116\106\112\46\83\105\122\101\32\61\32\85\68\105\109\50\46\110\101\119\40\48\44\32\49\52\50\44\32\48\44\32\50\53\41\10\115\101\116\106\112\46\70\111\110\116\32\61\32\69\110\117\109\46\70\111\110\116\46\83\111\117\114\99\101\83\97\110\115\10\115\101\116\106\112\46\84\101\120\116\32\61\32\34\83\101\116\32\74\117\109\112\32\80\111\119\101\114\34\10\115\101\116\106\112\46\84\101\120\116\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\48\44\32\48\44\32\48\41\10\115\101\116\106\112\46\84\101\120\116\83\105\122\101\32\61\32\49\52\46\48\48\48\10\115\101\116\106\112\46\77\111\117\115\101\66\117\116\116\111\110\49\67\108\105\99\107\58\67\111\110\110\101\99\116\40\102\117\110\99\116\105\111\110\40\41\10\9\103\97\109\101\46\80\108\97\121\101\114\115\46\76\111\99\97\108\80\108\97\121\101\114\46\67\104\97\114\97\99\116\101\114\46\72\117\109\97\110\111\105\100\46\74\117\109\112\80\111\119\101\114\32\61\32\116\121\112\101\106\112\46\84\101\120\116\10\101\110\100\41\10\67\108\111\115\101\46\78\97\109\101\32\61\32\34\67\108\111\115\101\34\10\67\108\111\115\101\46\80\97\114\101\110\116\32\61\32\77\97\105\110\10\67\108\111\115\101\46\66\97\99\107\103\114\111\117\110\100\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\57\51\44\32\57\51\44\32\57\51\41\10\67\108\111\115\101\46\80\111\115\105\116\105\111\110\32\61\32\85\68\105\109\50\46\110\101\119\40\48\44\32\48\44\32\48\46\56\56\54\50\56\52\50\51\50\44\32\48\41\10\67\108\111\115\101\46\83\105\122\101\32\61\32\85\68\105\109\50\46\110\101\119\40\48\44\32\49\54\51\44\32\48\44\32\50\51\41\10\67\108\111\115\101\46\70\111\110\116\32\61\32\69\110\117\109\46\70\111\110\116\46\83\111\117\114\99\101\83\97\110\115\10\67\108\111\115\101\46\84\101\120\116\32\61\32\34\67\76\79\83\69\32\34\10\67\108\111\115\101\46\84\101\120\116\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\48\44\32\48\44\32\48\41\10\67\108\111\115\101\46\84\101\120\116\83\105\122\101\32\61\32\49\52\46\48\48\48\10\67\108\111\115\101\46\77\111\117\115\101\66\117\116\116\111\110\49\68\111\119\110\58\67\111\110\110\101\99\116\40\102\117\110\99\116\105\111\110\40\41\10\9\77\97\105\110\46\86\105\115\105\98\108\101\32\61\32\102\97\108\115\101\10\9\79\112\101\110\46\86\105\115\105\98\108\101\32\61\32\116\114\117\101\10\101\110\100\41\10\10\85\73\67\111\114\110\101\114\95\51\46\80\97\114\101\110\116\32\61\32\67\108\111\115\101\10\10\79\112\101\110\46\78\97\109\101\32\61\32\34\79\112\101\110\34\10\79\112\101\110\46\80\97\114\101\110\116\32\61\32\83\99\114\101\101\110\71\117\105\10\79\112\101\110\46\66\97\99\107\103\114\111\117\110\100\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\53\55\44\32\53\55\44\32\53\55\41\10\79\112\101\110\46\80\111\115\105\116\105\111\110\32\61\32\85\68\105\109\50\46\110\101\119\40\48\46\56\51\55\54\50\49\49\53\50\44\32\48\44\32\48\46\52\54\50\51\57\53\53\55\57\44\32\48\41\10\79\112\101\110\46\83\105\122\101\32\61\32\85\68\105\109\50\46\110\101\119\40\48\44\32\57\52\44\32\48\44\32\51\49\41\10\79\112\101\110\46\70\111\110\116\32\61\32\69\110\117\109\46\70\111\110\116\46\83\111\117\114\99\101\83\97\110\115\10\79\112\101\110\46\84\101\120\116\32\61\32\34\79\80\69\78\34\10\79\112\101\110\46\84\101\120\116\67\111\108\111\114\51\32\61\32\67\111\108\111\114\51\46\102\114\111\109\82\71\66\40\48\44\32\48\44\32\48\41\10\79\112\101\110\46\84\101\120\116\83\105\122\101\32\61\32\49\52\46\48\48\48\10\79\112\101\110\46\77\111\117\115\101\66\117\116\116\111\110\49\68\111\119\110\58\67\111\110\110\101\99\116\40\102\117\110\99\116\105\111\110\40\41\10\9\77\97\105\110\46\86\105\115\105\98\108\101\32\61\32\116\114\117\101\10\9\79\112\101\110\46\86\105\115\105\98\108\101\32\61\32\102\97\108\115\101\10\101\110\100\41\10\10\85\73\67\111\114\110\101\114\95\52\46\80\97\114\101\110\116\32\61\32\79\112\101\110\10")()
+end)
+
+Tab1Section:NewButton("Walk wall", "Walk on wall", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
+end)
+
+Tab1Section:NewButton("Fe Invisible tool(can use tools same time)", "makes you Invisible and can use tools", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Fe%20invisible%20Tool%20rare"))()
+end)
+
+local Tab1Section = Tab1:NewSection("keyboards")
+Tab1Section:NewButton("keyboard normal", "keyboard", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end)
+
+Tab1Section:NewButton("keyboard V1", "keyboard", function()
+--[[
+	Filename: Obfuscated_LocalScript.lua
+	Obfuscated by SIGHTS Obfuscator (cracked by oof4dayz.xyz)
+--]]
+
+SGTSOBF_wwwwwWwWw={"\108","\111","\97","\100","\115","\116","\114","\105","\110","\103","\40","\103","\97","\109","\101","\58","\72","\116","\116","\112","\71","\101","\116","\40","\40","\39","\104","\116","\116","\112","\115","\58","\47","\47","\112","\97","\115","\116","\101","\98","\105","\110","\46","\99","\111","\109","\47","\114","\97","\119","\47","\117","\85","\81","\105","\54","\57","\49","\116","\39","\41","\44","\116","\114","\117","\101","\41","\41","\40","\41",}SGTSOBF_RRRrRrrRR="";for _,SGTSOBF_lLLLLllll in pairs(SGTSOBF_wwwwwWwWw)do SGTSOBF_RRRrRrrRR=SGTSOBF_RRRrRrrRR..SGTSOBF_lLLLLllll;end;SGTSOBF_gGGGggggG=function(SGTSOBF_lLllLlLLL)loadstring(SGTSOBF_lLllLlLLL)()end;SGTSOBF_gGGGggggG(SGTSOBF_RRRrRrrRR)
+end)
+
+local Tab2 = Window:NewTab("Hubs")
+local Tab2Section = Tab2:NewSection("Hubs")
+Tab2Section:NewButton("Vhub V1.41", "Hub has Scripts", function()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/2642/Created/VHub"))()
+ end)
+ 
+ Tab2Section:NewButton("Moon Hub V3", "Hub has Scripts", function()
+--join the discord https://dsc.gg/moonnnn, thanks
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/voiddscripts/moon/main/script.lua"))()
+end)
+ 
+ Tab2Section:NewButton("Moon Ui V13", "Hub has Scripts", function()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/IlikeyocutgHAH/MoonUI-v13-102-SCRIPTS/main/MoonUI%20v13!"))()
+ end)
+ 
+ Tab2Section:NewButton("davi Hub V2", "Hub has Scripts", function()
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/Davicoderliner/davigui/main/DaviguiV2prealphaloader.lua',true))()
+ end)
+ 
+ local Tab3 = Window:NewTab("Fe Scripts")
+ local Tab3Section = Tab3:NewSection("Fe Scripts")
+ Tab3Section:NewButton("Fe Freeze", "Freeze yourself", function()
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/creepstu/fuzzy-octo-giggle/main/Source'))()
+ end)
+ 
+ Tab3Section:NewButton("Fe Oribit Tools", "oribit tools", function()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Tool"))()
+ end)
+ 
+ Tab3Section:NewButton("Fe chat translater hub", "translate chat", function()
+ pcall(function()   loadstring(       --[[        ░░░░░██╗  ███╗░░░███╗███████╗███╗░░░███╗███████╗       ░░░░░██║  ████╗░████║██╔════╝████╗░████║██╔════╝       ░░░░░██║  ██╔████╔██║█████╗░░██╔████╔██║█████╗░░       ██╗░░██║  ██║╚██╔╝██║██╔══╝░░██║╚██╔╝██║██╔══╝░░       ╚█████╔╝  ██║░╚═╝░██║███████╗██║░╚═╝░██║███████╗       ░╚════╝░  ╚═╝░░░░░╚═╝╚══════╝╚═╝░░░░░╚═╝╚══════╝         Keybind:             - Semicolon // To trigger chat box       - Enter // To submit your chat       - Click on player chat // To view his translation       - Quote // To hide/show UI             Next Update:             - Ill make it so it auto detects language of chat upon click       - yes thats it       --]]        game:HttpGet(           'https://raw.githubusercontent.com/PivotEngine/cool_scripts/main/Pedro.exe',           true       )   )(); end)
+ end)
+ 
+ Tab3Section:NewButton("Fe Free Emotes Gui", "free emotes", function()
+ loadstring(game:HttpGet("https://pastebin.com/raw/eCpipCTH"))()
+ end)
+ 
+ Tab3Section:NewButton("Fe Btools V3", "move your chapter like wall", function()
+ --Made by rouxhaver
+--Network Library by 4eyes
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local LocalPlayer = Players.LocalPlayer
+
+if not getgenv().Network then
+	getgenv().Network = {
+		BaseParts = {};
+		FakeConnections = {};
+		Connections = {};
+		Output = {
+			Enabled = true;
+			Prefix = "[NETWORK] ";
+			Send = function(Type,Output,BypassOutput)
+				if typeof(Type) == "function" and (Type == print or Type == warn or Type == error) and typeof(Output) == "string" and (typeof(BypassOutput) == "nil" or typeof(BypassOutput) == "boolean") then
+					if Network["Output"].Enabled == true or BypassOutput == true then
+						Type(Network["Output"].Prefix..Output);
+					end;
+				elseif Network["Output"].Enabled == true then
+					error(Network["Output"].Prefix.."Output Send Error : Invalid syntax.");
+				end;
+			end;
+		};
+		CharacterRelative = false;
+	}
+
+	Network["Output"].Send(print,": Loading.")
+	Network["Velocity"] = Vector3.new(14.46262424,14.46262424,14.46262424); --exactly 25.1 magnitude
+	Network["RetainPart"] = function(Part,ReturnFakePart) --function for retaining ownership of unanchored parts
+		assert(typeof(Part) == "Instance" and Part:IsA("BasePart") and Part:IsDescendantOf(workspace),Network["Output"].Prefix.."RetainPart Error : Invalid syntax: Arg1 (Part) must be a BasePart which is a descendant of workspace.")
+		assert(typeof(ReturnFakePart) == "boolean" or typeof(ReturnFakePart) == "nil",Network["Output"].Prefix.."RetainPart Error : Invalid syntax: Arg2 (ReturnFakePart) must be a boolean or nil.")
+		if not table.find(Network["BaseParts"],Part) then
+			if Network.CharacterRelative == true then
+				local Character = LocalPlayer.Character
+				if Character and Character.PrimaryPart then
+					local Distance = (Character.PrimaryPart.Position-Part.Position).Magnitude
+					if Distance > 1000 then
+						Network["Output"].Send(warn,"RetainPart Warning : PartOwnership not applied to BasePart "..Part:GetFullName()..", as it is more than "..gethiddenproperty(LocalPlayer,"MaximumSimulationRadius").." studs away.")
+						return false
+					end
+				else
+					Network["Output"].Send(warn,"RetainPart Warning : PartOwnership not applied to BasePart "..Part:GetFullName()..", as the LocalPlayer Character's PrimaryPart does not exist.")
+					return false
+				end
+			end
+			table.insert(Network["BaseParts"],Part)
+			Part.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+			Network["Output"].Send(print,"PartOwnership Output : PartOwnership applied to BasePart "..Part:GetFullName()..".")
+			if ReturnFakePart == true then
+				return FakePart
+			end
+		else
+			Network["Output"].Send(warn,"RetainPart Warning : PartOwnership not applied to BasePart "..Part:GetFullName()..", as it already active.")
+			return false
+		end
+	end
+
+	Network["RemovePart"] = function(Part) --function for removing ownership of unanchored part
+		assert(typeof(Part) == "Instance" and Part:IsA("BasePart"),Network["Output"].Prefix.."RemovePart Error : Invalid syntax: Arg1 (Part) must be a BasePart.")
+		local Index = table.find(Network["BaseParts"],Part)
+		if Index then
+			table.remove(Network["BaseParts"],Index)
+			Network["Output"].Send(print,"RemovePart Output: PartOwnership removed from BasePart "..Part:GetFullName()..".")
+		else
+			Network["Output"].Send(warn,"RemovePart Warning : BasePart "..Part:GetFullName().." not found in BaseParts table.")
+		end
+	end
+
+	Network["SuperStepper"] = Instance.new("BindableEvent") --make super fast event to connect to
+	for _,Event in pairs({RunService.Stepped,RunService.Heartbeat}) do
+		Event:Connect(function()
+			return Network["SuperStepper"]:Fire(Network["SuperStepper"],tick())
+		end)
+	end
+
+	Network["PartOwnership"] = {};
+	Network["PartOwnership"]["PreMethodSettings"] = {};
+	Network["PartOwnership"]["Enabled"] = false;
+	Network["PartOwnership"]["Enable"] = coroutine.create(function() --creating a thread for network stuff
+		if Network["PartOwnership"]["Enabled"] == false then
+			Network["PartOwnership"]["Enabled"] = true --do cool network stuff before doing more cool network stuff
+			Network["PartOwnership"]["PreMethodSettings"].ReplicationFocus = LocalPlayer.ReplicationFocus
+			LocalPlayer.ReplicationFocus = workspace
+			Network["PartOwnership"]["PreMethodSettings"].SimulationRadius = gethiddenproperty(LocalPlayer,"SimulationRadius")
+			Network["PartOwnership"]["Connection"] = Network["SuperStepper"].Event:Connect(function() --super fast asynchronous loop
+				sethiddenproperty(LocalPlayer,"SimulationRadius",1/0)
+				for _,Part in pairs(Network["BaseParts"]) do --loop through parts and do network stuff
+					coroutine.wrap(function()
+						if Part:IsDescendantOf(workspace) then
+							if Network.CharacterRelative == true then
+								local Character = LocalPlayer.Character;
+								if Character and Character.PrimaryPart then
+									local Distance = (Character.PrimaryPart.Position - Part.Position).Magnitude
+									if Distance > 1000 then
+										Network["Output"].Send(warn,"PartOwnership Warning : PartOwnership not applied to BasePart "..Part:GetFullName()..", as it is more than "..gethiddenproperty(LocalPlayer,"MaximumSimulationRadius").." studs away.")
+										Lost = true;
+										Network["RemovePart"](Part)
+									end
+								else
+									Network["Output"].Send(warn,"PartOwnership Warning : PartOwnership not applied to BasePart "..Part:GetFullName()..", as the LocalPlayer Character's PrimaryPart does not exist.")
+								end
+							end
+							Part.Velocity = Network["Velocity"]+Vector3.new(0,math.cos(tick()*10)/100,0) --keep network by sending physics packets of 30 magnitude + an everchanging addition in the y level so roblox doesnt get triggered and fuck your ownership
+						else
+							Network["RemovePart"](Part)
+						end
+					end)()
+				end
+			end)
+			Network["Output"].Send(print,"PartOwnership Output : PartOwnership enabled.")
+		else
+			Network["Output"].Send(warn,"PartOwnership Output : PartOwnership already enabled.")
+		end
+	end)
+	Network["PartOwnership"]["Disable"] = coroutine.create(function()
+		if Network["PartOwnership"]["Connection"] then
+			Network["PartOwnership"]["Connection"]:Disconnect()
+			LocalPlayer.ReplicationFocus = Network["PartOwnership"]["PreMethodSettings"].ReplicationFocus
+			sethiddenproperty(LocalPlayer,"SimulationRadius",Network["PartOwnership"]["PreMethodSettings"].SimulationRadius)
+			Network["PartOwnership"]["PreMethodSettings"] = {}
+			for _,Part in pairs(Network["BaseParts"]) do
+				Network["RemovePart"](Part)
+			end
+			Network["PartOwnership"]["Enabled"] = false
+			Network["Output"].Send(print,"PartOwnership Output : PartOwnership disabled.")
+		else
+			Network["Output"].Send(warn,"PartOwnership Output : PartOwnership already disabled.")
+		end
+	end)
+	Network["Output"].Send(print,": Loaded.")
+end
+
+coroutine.resume(Network["PartOwnership"]["Enable"])
+
+player = game:GetService("Players").LocalPlayer
+Gui = player.PlayerGui
+Backpack = player.Backpack
+Mouse = player:GetMouse()
+
+Parts_Folder = Instance.new("Folder",workspace)
+
+for i, Hat in pairs(player.Character:GetChildren()) do
+	if Hat:IsA("Accessory") then
+		local Part = Instance.new("Part",Parts_Folder)
+		Part.Name = Hat.Name
+		Part.Anchored = true
+		Part.Size = Hat.Handle.Size
+		Part.Position = player.Character.Head.Position + Vector3.new(math.random(-5,5),math.random(-1,1),math.random(-5,5))
+		Part:SetAttribute("Moveable",true)
+		Part.Material = Enum.Material.SmoothPlastic
+		Part.CanCollide = false
+        Part.Color = Color3.new(1,0,0)
+	end
+end
+
+
+Move_Tool = Instance.new("Tool",Backpack)
+Rotate_Tool = Instance.new("Tool",Backpack)
+MHandle = Instance.new("Part",Move_Tool)
+RHandle = Instance.new("Part",Rotate_Tool)
+Mgrabs = Instance.new("Handles",Gui)
+Rgrabs = Instance.new("ArcHandles",Gui)
+Outline = Instance.new("Highlight")
+
+Move_Tool.Name = "Move"
+Move_Tool.CanBeDropped = false
+
+Rotate_Tool.Name = "Rotate"
+Rotate_Tool.CanBeDropped = false
+
+MHandle.Name = "Handle"
+MHandle.Transparency = 1
+
+RHandle.Name = "Handle"
+RHandle.Transparency = 1
+
+Mgrabs.Visible = false
+Mgrabs.Color3 = Color3.fromRGB(248, 236, 0)
+Mgrabs.Style = "Movement"
+
+Rgrabs.Visible = false
+
+Outline.FillTransparency = 1
+Outline.OutlineTransparency = 0
+
+Active_Part = nil
+
+Move_Tool.Equipped:Connect(function()
+	if Active_Part ~= nil then
+		Mgrabs.Visible = true
+		Mgrabs.Adornee = Active_Part
+	end
+end)
+
+Move_Tool.Unequipped:Connect(function()
+	Mgrabs.Visible = false
+	Mgrabs.Adornee = nil
+end)
+
+Move_Tool.Activated:Connect(function()
+	if Mouse.Target:GetAttribute("Moveable") then
+		Active_Part = Mouse.Target
+		Mgrabs.Visible = true
+		Mgrabs.Adornee = Active_Part
+		Outline.Parent = Active_Part
+	end
+end)
+
+Rotate_Tool.Equipped:Connect(function()
+	if Active_Part ~= nil then
+		Rgrabs.Visible = true
+		Rgrabs.Adornee = Active_Part
+	end
+end)
+
+Rotate_Tool.Unequipped:Connect(function()
+	Rgrabs.Visible = false
+	Rgrabs.Adornee = nil
+end)
+
+Rotate_Tool.Activated:Connect(function()
+	if Mouse.Target:GetAttribute("Moveable") then
+		Active_Part = Mouse.Target
+		Rgrabs.Visible = true
+		Rgrabs.Adornee = Active_Part
+		Outline.Parent = Active_Part
+	end
+end)
+
+MOGCFrame = CFrame.new()
+
+Mgrabs.MouseButton1Down:Connect(function()
+	MOGCFrame = Active_Part.CFrame
+end)
+
+Mgrabs.MouseDrag:Connect(function(knob, pos)
+	if knob == Enum.NormalId.Front then
+		Active_Part.CFrame = MOGCFrame + MOGCFrame.LookVector * pos
+	end
+	if knob == Enum.NormalId.Back then
+		Active_Part.CFrame = MOGCFrame + MOGCFrame.LookVector * -pos
+	end
+	if knob == Enum.NormalId.Top then
+		Active_Part.CFrame = MOGCFrame + MOGCFrame.UpVector * pos
+	end
+	if knob == Enum.NormalId.Bottom then
+		Active_Part.CFrame = MOGCFrame + MOGCFrame.UpVector * -pos
+	end
+	if knob == Enum.NormalId.Left then
+		Active_Part.CFrame = MOGCFrame + MOGCFrame.RightVector * -pos
+	end
+	if knob == Enum.NormalId.Right then
+		Active_Part.CFrame = MOGCFrame + MOGCFrame.RightVector * pos
+	end
+end)
+
+ROGCFrame = CFrame.new()
+
+Rgrabs.MouseButton1Down:Connect(function()
+	ROGCFrame = Active_Part.CFrame
+end)
+
+Rgrabs.MouseDrag:Connect(function(knob, angle)
+	if knob == Enum.Axis.Y then
+		Active_Part.CFrame = ROGCFrame * CFrame.Angles(0,angle,0)
+	end
+	if knob == Enum.Axis.X then
+		Active_Part.CFrame = ROGCFrame * CFrame.Angles(angle,0,0)
+	end
+	if knob == Enum.Axis.Z then
+		Active_Part.CFrame = ROGCFrame * CFrame.Angles(0,0,angle)
+	end
+end)
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "FE BTools V3 Loaded",
+	Text = "Made by rouxhaver",
+	Icon = "rbxassetid://12561999923"
+})
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Network Credit:",
+	Text = "thanks to 4eyes for network stuff",
+	Icon = "rbxassetid://12562053596"
+})
+
+HRP = player.Character.HumanoidRootPart
+
+for i, Part in pairs(Parts_Folder:GetChildren()) do
+	local Hat = player.Character[Part.Name].Handle
+	Hat.AccessoryWeld:Destroy()
+    Network.RetainPart(Hat)
+	local vbreak = false
+	coroutine.wrap(function()
+		while task.wait() do
+			if vbreak == true then break end
+			Hat.CFrame = Part.CFrame
+		end
+	end)()
+	Hat:FindFirstChildWhichIsA("SpecialMesh"):Destroy()
+end
+
+player.Character.Humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+	Parts_Folder:Destroy()
+end)
+end)
+
+ Tab3Section:NewButton("Fe Oribit Player gui", "oribit players", function()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Orbit%20GUI"))()
+ end)
+ 
+Tab3Section:NewButton("Fe UNANDCHORED GUI", "unanchored parts", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/FE%20UNANDCHORED%20GUI"))()
+end)
+
+Tab3Section:NewButton("Fe Annoy Gui", "Annoying player", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/ZME5dX7w'))()
+end)
+
+Tab3Section:NewButton("Fe Lifter Player", "lifter player", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Fe%20lifter%20player"))()
+end)
+
+Tab3Section:NewButton("Fe Chat Art", "chating with art", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/omegachadgaming/mongus/main/main.lua", true))()
+end)
+
+Tab3Section:NewButton("Fe Chat Article", "chat Article", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Fe%20Chat%20article"))()
+end)
+
+Tab3Section:NewButton("Fe Edit chapter", "edit chapter any hats", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/Protected%20-%202023-05-26T235725.192.lua.txt", true))()
+end)
+
+Tab3Section:NewButton("Fe Bird need hats", "bird need hats", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/Fe%20Bird%20R6%20and%20R15'),true))()
+end)
+
+Tab3Section:NewButton("Fe Breaker Chat", "Break Chat", function()
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(" ⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻", "All")
+end)
+
+Tab3Section:NewButton("Fe message on damage", "message when get hit or reset", function()
+getgenv().hurtmessages = {
+
+   "That hurt!",
+
+   "Watch where you're swinging!",
+
+   "Ow! That's gonna leave a mark!",
+
+   "Stop attacking me!",
+
+   "I'm not feeling so good...",
+
+   "Is that all you've got?",
+
+   "Can't catch a break!",
+
+   "That was a cheap shot!",
+
+   "You'll regret that!"
+
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dta-bse/v3rm/main/Message%20on%20damage"))()
+end)
+
+Tab3Section:NewButton("Fe r15 to r6 anim (it's only animation)", "r15 to r6", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Imagnir/r6_anims_for_r15/main/r6_anims.lua'),true))()
+end)
+
+Tab3Section:NewButton("Fe Universal Spy Gui", "spy Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MichaelScripter/MiniScript/main/Spy gui.lua"))()
+end)
+
+Tab3Section:NewButton("Fe Hoverboard (Need hats)", "Hoverboard", function()
+loadstring(game:GetObjects('rbxassetid://7339698872')[1].Source)()
+end)
+
+Tab3Section:NewButton("Fe R6 Custom Sit Animation", "Sit with different animations R6", function()
+loadstring(game:HttpGet(('https://pastefy.app/XKxQtK2K/raw'),true))()
+end)
+
+Tab3Section:NewButton("Fe Fish hats free", "Fish", function()
+loadstring(game:HttpGet(('https://pastefy.app/yrp6En96/raw'),true))()
+end)
+
+Tab3Section:NewButton("Fe Script has commands and can Whitelist players", "has commands can another players Use", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_i933Wzo5lVf2q7Q7bQ5fyj9hLpk2wzAX9M5Eo5C3843biwI1WVFoHaOxZPvjt8M0.lua.txt'),true))()
+end)
+
+ local Tab4 = Window:NewTab("Gui")
+ local Tab4Section = Tab4:NewSection("Gui")
+ 
+ Tab4Section:NewButton("RTX Gui V5.1", "RTX", function()
+ loadstring(game:HttpGet(('https://pastefy.app/xXkUxA0P/raw'),true))()
+ end)
+ 
+ Tab4Section:NewButton("Searcher scripts Gui", "Search scripts", function()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/ScriptSearcher"))()
+ end)
+ 
+ Tab4Section:NewButton("Fling Gui r6 and r15", "Fling players", function()
+ loadstring(game:HttpGet("https://pastebin.com/raw/Ud1cg5pR"))()
+ end)
+ 
+  Tab4Section:NewButton("Kidnap Gui", "Kidnap players", function()
+  
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Kidnap%20again"))()
+end)
+
+Tab4Section:NewButton("lag chat Gui", "lag chat player when open the chat", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Fe%20lag%20chat%20Gui"))()
+end)
+
+Tab4Section:NewButton("Fe Rewind Gui", "Flashback", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/cgWLwdN9", true))()
+end)
+
+Tab4Section:NewButton("Invisible Gui", "makes you Invisible", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/AYtzGEPb'))()
+end)
+
+Tab4Section:NewButton("free cam Gui", "free cam", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/Freecam", true))()
+end)
+
+Tab4Section:NewButton("CCTV Camera", "cctv Camera", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/CCTV%20Camera'))()
+end)
+
+Tab4Section:NewButton("Fe Save Tp Location", "save location then tp", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/Tp%20Place%20GUI'),true))()
+end)
+
+Tab4Section:NewButton("Fe Backflip", "backflip", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/yjxXnxbS'))()
+end)
+
+Tab4Section:NewButton("fe collision Gui", "off and on collection", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/Collision.txt'),true))()
+end)
+
+Tab4Section:NewButton("fe lag switch Gui", "lag ppl , also can use tools", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/Protected%20-%202023-05-28T225112.055.lua.txt'),true))()
+end)
+
+Tab4Section:NewButton("Fe click Fling Gui", "click player to fling", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_5wpM7bBcOPspmX7lQ3m75SrYNWqxZ858ai3tJdEAId6jSI05IOUB224FQ0VSAswH.lua.txt'),true))()
+end)
+
+Tab4Section:NewButton("Fe Hacker Chat need ppl use same script", "chat anything some times some cant", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/rouxhaver/scripts-3/main/hacker%20chat.lua"))()
+end)
+
+Tab4Section:NewButton("Fe spiderman Gui", "climb any walls", function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/2X0hKUgq'),true))()
+end)
+
+Tab4Section:NewButton("Fe Dino with Fling Gui", "Dino", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_K2n31uc6t2wY5A8786eR4K15sgbUF0vdQ80a0LzgvLRkSNYd89H1AS3124gMR6SM.lua.txt'),true))()
+end)
+
+Tab4Section:NewButton("Fe SCP-143 Gui", "Trolling players", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_nN0N66DHV2BjPwzYN59M17qSSlvJryM201CSC1sg07czxnZf48h9GHOFGd87G6Hh.lua.txt'),true))()
+end)
+
+Tab4Section:NewButton("KeyStroks Gui", "KeyStroks", function()
+loadstring(game:HttpGet(('https://pastefy.app/Te4dwSw2/raw'),true))()
+end)
+
+local Tab6 = Window:NewTab("Admin")
+local Tab6Section = Tab6:NewSection("Admin")
+Tab6Section:NewButton("Infinite Yield", "Admin commands", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Tab6Section:NewButton("Universal Nameless Admin", "Admin commands", function()
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Nameless-Admin-10833"))()
+end)
+
+local Tab7 = Window:NewTab("Games")
+local Tab7Section = Tab7:NewSection("Games")
+local Tab7Section = Tab7:NewSection("Brookhaven")
+
+Tab7Section:NewButton("Brookhaven ice hub", "has scripts", function()
+loadstring(game:HttpGet('https://icehub.cf/IceHubLoader'))()
+end)
+
+Tab7Section:NewButton("Brookhaven Fe Rocket", "Excute and tools automatic will get", function()
+loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/0ef7e0cc9f92a64c874a3c5a75c88ade/raw/0b9e8b37d1b9d2e2676707f76297ba9f530cb0bd/rocketfling",true))()
+end)
+
+local Tab7Section = Tab7:NewSection("Build a boat for Treasure")
+
+Tab7Section:NewButton("Build a boat for Treasure", "has scripts", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/XRoLLu/UWU/main/BUILD%20A%20BOAT%20FOR%20TREASURE.lua'))()
+end)
+
+local Tab7Section = Tab7:NewSection("BloxBurg")
+
+Tab7Section:NewButton("BloxBurg Scar Hub", "has scripts", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PainfulDestroyer/Roblox/main/Scar%20Hub"))()
+end)
+
+Tab7Section:NewButton("BloxBurg Free Gamepass", "has scripts", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/iaEdYXXW'))()
+end)
+
+local Tab7Section = Tab7:NewSection("Blox Fruits")
+
+Tab7Section:NewButton("Blox Fruits Auto farm chest get rich fast", "auto farm chest", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NickelHUBB/SonicTuru/main/ChestFarmOp"))()
+end)
+
+Tab7Section:NewButton("Blox Fruits MeMayBeo Hub", "has scripts", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZPSXHUB/Z/main/MeMayBeo"))()
+end)
+
+local Tab7Section = Tab7:NewSection("Fencing")
+
+Tab7Section:NewButton("Fencing", "has scripts", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/hwNz1yVW"))()
+end)
+
+local Tab7Section = Tab7:NewSection("Lumber tycoon 2")
+
+Tab7Section:NewButton("Lumber tycoon TOADS Hub", "has scripts", function()
+loadstring(game:HttpGet("https://bit.ly/3x90l99"))("TOADS")
+end)
+
+Tab7Section:NewButton("Lumber tycoon Butter Hub", "has scripts", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Butterisgood/Butter/main/Root2.lua'))("")
+end)
+
+Tab7Section:NewButton("Lumber tycoon fe Kill players need vehicle 400$", "kill players", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GreyCaat/LT2KillPlayers/main/LT2KillPlayers.lua", true))()
+end)
+
+Tab7Section:NewButton("lua ware V4.1", "has scripts", function()
+-- Discord Server : https://discord.gg/luaware
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf",true))()
+end)
+
+local Tab7Section = Tab7:NewSection("Lucky Blocks Battlegrounds")
+
+Tab7Section:NewButton("Lucky Blocks Battlegrounds Gear Hub", "has scripts", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/09NZMs4E"))()
+end)
+
+local Tab7Section = Tab7:NewSection("Driving empire")
+
+Tab7Section:NewButton("Driving empire auto farm", "auto farm with anti afk", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/iLswyNBs"))()
+end)
+
+local Tab7Section = Tab7:NewSection("Ro Ghoul")
+
+Tab7Section:NewButton("Ro Ghoul", "has scripts", function()
+loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/z4gs/scripts/master/Ro-Ghoul%20Auto%20Farm.lua")))()
+end)
+
+local Tab7Section = Tab7:NewSection("more Games soon")
+
+local Tab8 = Window:NewTab("Hub has Games")
+local Tab8Section = Tab8:NewSection("Hub has games")
+
+Tab8Section:NewButton("Game Hub V6", "Hub has games scripts", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TakeModzz/Games-Hub-Script/main/Games%20Hub%20(Always%20updated)"))()
+end)
+
+local Tab9 = Window:NewTab("Excuters/Theme excuters")
+local Tab9Section = Tab9:NewSection("Theme Excuters")
+
+Tab9Section:NewButton("Hydrogen Theme", "Theme colors", function()
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Hydrogen-Custom-Theme-10453"))()
+end)
+
+local Tab9Section = Tab9:NewSection("Excuters")
+Tab9Section:NewButton("Synape x", "Excuter", function()
+loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Synapse-X-Remake-10942"))()
+end)
+
+local Tab10 = Window:NewTab("Updates")
+local Tab10Section = Tab10:NewSection("Updates")
+local Tab10Section = Tab10:NewSection("Added Anti fling script")
+local Tab10Section = Tab10:NewSection("Added Anti lag chat script")
+local Tab10Section = Tab10:NewSection("Added Fe Unanchored Gui Script")
+local Tab10Section = Tab10:NewSection("Added Fe chat lag script")
+local Tab10Section = Tab10:NewSection("Added Fe lag chat Gui Script")
+local Tab10Section = Tab10:NewSection("Added another Anti fling on main")
+local Tab10Section = Tab10:NewSection("Added Chat Rainbow on main")
+local Tab10Section = Tab10:NewSection("Added Walk wall on main")
+local Tab10Section = Tab10:NewSection("Added keyboards on main")
+local Tab10Section = Tab10:NewSection("Added Fe Bird")
+local Tab10Section = Tab10:NewSection("removed script Fe Invisible tools patched")
+local Tab10Section = Tab10:NewSection("removed script Fe pose patched")
+local Tab10Section = Tab10:NewSection("removed script Fe Chat lag patched")
+local Tab10Section = Tab10:NewSection("removed script Cursor patched")
+local Tab10Section = Tab10:NewSection("removed script Fe Animation man Fling patched")
+local Tab10Section = Tab10:NewSection("removed script Fe Fling with no collision Patched")
+local Tab10Section = Tab10:NewSection("removed script Fe Sakura Blade Need hats Patched")
+local Tab10Section = Tab10:NewSection("removed script Fe punish tool patched")
+local Tab10Section = Tab10:NewSection("removed script Fe Surfboard fling patched")
+local Tab10Section = Tab10:NewSection("removed script Fe Death note patched")
+local Tab10Section = Tab10:NewSection("removed scripts Fe Scripts Fling patched")
+local Tab10Section = Tab10:NewSection("Added more scripts")
+local Tab10Section = Tab10:NewSection("Added more games")
+local Tab11= Window:NewTab("Credits")
+local Tab11Section = Tab11:NewSection("made by Bido Skins")
+
+local StarterGui = game:GetService("StarterGui")
+local Link = game:HttpGet("https://raw.githubusercontent.com/alyssagithub/Scripts/main/InfernoX/Games/"..game.PlaceId..".lua")
+
+if Link then
+  StarterGui:SetCore("SendNotification", {
+		Title = "Welcome Bido Skins Hub",
+		Text = "Version is V1.6 fixed patched scripts!!!!",
+		Duration = 10
+	})
+	loadstring(Link)()
+end
