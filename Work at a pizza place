@@ -1,0 +1,4 @@
+--Work at a pizza place script
+--By M1zz
+
+loadstring(game:HttpGet('https://pastebin.com/raw/UNqr79DV'))()
