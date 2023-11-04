@@ -1,0 +1,17 @@
+delta.Settings:AddButton("Infinite Yield Admin", "Admin Commands", function()
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+delta.Settings:AddButton("Infinite Yield ADMIN WORK TEST", "Admin Commands", function()
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+delta.Settings:AddInput("Put Your Speed Here", "Changes Your Speed", function(Subscribe)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Subscribe 
+  print(Subscribe)
+end)
+
+delta.Settings:AddInput("Put Your Jumppower Here", "Changes Your JumpPower", function(Subscribe)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = Subscribe 
+  print(Subscribe)
+end)
