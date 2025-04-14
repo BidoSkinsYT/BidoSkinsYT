@@ -1,0 +1,35 @@
+local player = game.Players.LocalPlayer
+
+-- Function to handle character health
+local function onCharacterAdded(character)
+    -- Wait for the humanoid to be created
+    local humanoid = character:WaitForChild("Humanoid")
+    
+    -- Make the character immortal
+    humanoid.Died:Connect(function()
+        -- Re-instantiate the player character 
+        wait(0.1) -- a brief wait for cleanup
+        player:LoadCharacter()
+        
+        -- Optionally, set the Humanoid's health to max health
+        humanoid.Health = humanoid.MaxHealth
+    end)
+    
+    -- Restore health immediately if the character is created
+    humanoid.HealthChanged:Connect(function(health)
+        if health <= 0 then
+            humanoid.Health = humanoid.MaxHealth
+        end
+    end)
+
+    -- Restore health on spawn
+    humanoid.Health = humanoid.MaxHealth
+end
+
+-- Connect the function to the player's character
+player.CharacterAdded:Connect(onCharacterAdded)
+
+-- If the character is already loaded
+if player.Character then
+    onCharacterAdded(player.Character)
+end
